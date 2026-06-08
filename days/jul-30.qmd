@@ -1,0 +1,139 @@
+---
+title: "Jul 30 — DMZ + Euljiro"
+---
+
+```{=html}
+<div class="day-hero">
+  <div class="day-badge">Thursday · July 30, 2026 · Day 5 of 15</div>
+  <h1 class="day-title">DMZ + Euljiro 🪖</h1>
+  <div class="day-subtitle">📍 DMZ (6–7 hrs) · Seolleongtang · Euljiro Hidden Alleys · Hannam · Seoul</div>
+</div>
+```
+
+```{=html}
+<div id="map-jul30" class="day-map"></div>
+<script>
+(function() {
+  var map = L.map('map-jul30').setView([37.8000, 126.8000], 10);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OSM</a>'
+  }).addTo(map);
+  function dot(c) {
+    return L.divIcon({ className:'', html:'<div style="width:13px;height:13px;border-radius:50%;background:'+c+';border:2.5px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.4)"></div>', iconSize:[13,13], iconAnchor:[6,6], popupAnchor:[0,-8] });
+  }
+  function hotelDot() {
+    return L.divIcon({ className:'', html:'<div style="width:22px;height:22px;border-radius:50%;background:#4A148C;border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1;color:#fff">★</div>', iconSize:[22,22], iconAnchor:[11,11], popupAnchor:[0,-13] });
+  }
+  var pts = [
+    { name:'🏨 Shilla Stay Seodaemun Seoul Station', lat:37.5572, lng:126.9680, hotel:true, url:'https://www.google.com/maps/search/?api=1&query=Shilla+Stay+Seodaemun+Seoul+Station' },
+    { name:'DMZ — Dorasan Station 🪖 (Booked)', lat:37.9355, lng:126.6783, c:'#C62828', url:'https://www.google.com/maps/search/?api=1&query=DMZ+Dorasan+Station+Korea' },
+    { name:'Oegojip Seolleongtang 🍲', lat:37.5659, lng:126.9918, c:'#43A047', url:'https://www.google.com/maps/search/?api=1&query=Oegojip+Seolleongtang+Seoul' },
+    { name:'Euljiro Alleys ☕', lat:37.5659, lng:126.9950, c:'#1565C0', url:'https://www.google.com/maps/search/?api=1&query=Euljiro+Seoul' },
+    { name:'Hannam Oriental Roast Chicken 🍗', lat:37.5359, lng:127.0063, c:'#C62828', url:'https://share.google/zvcIu85n4XwzPMgQ8' },
+  ];
+  window.pageMap = map; window.pageMarkers = [];
+  pts.forEach(function(p) {
+    var m = L.marker([p.lat, p.lng], { icon: p.hotel ? hotelDot() : dot(p.c) }).addTo(map);
+    var html = '<b>' + p.name + '</b>';
+    if (p.url) html += '<br><a href="' + p.url + '" target="_blank" style="font-size:12px">Open in Maps →</a>';
+    m.bindPopup(html);
+    window.pageMarkers.push({ marker: m, lat: p.lat, lng: p.lng });
+  });
+})();
+</script>
+```
+
+```{=html}
+<div class="section-header">Morning — DMZ Tour</div>
+
+<div class="event-card meal" style="border-color:#F9A825;background:#FFFDE7" data-dt="2026-07-30T06:30" data-lat="37.5572" data-lng="126.9680">
+  <div class="event-time">06:30</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag note">🍳 Breakfast</span></div>
+    <div class="event-name">Breakfast Buffet · CAFE (B1F) · Shilla Stay</div>
+    <div class="event-notes">Thursday (Weekday) hours: <strong>06:30–09:30</strong> · ₩23,000/adult · <strong>Go early today</strong> — DMZ tour departs at 08:00. Be down by 06:30–07:00 to eat and leave by 07:20.</div>
+  </div>
+</div>
+
+<div class="event-card transport" data-dt="2026-07-30T08:00" data-lat="37.9355" data-lng="126.6783">
+  <div class="event-time">08:00</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag booked">BOOKED ✓</span><span class="tag activity">🪖 Tour</span></div>
+    <div class="event-name">DMZ Tour (6–7 hours)</div>
+    <div class="event-notes">Guided tour of the Demilitarized Zone between North and South Korea. Typically includes:
+      <ul>
+        <li>Third Infiltration Tunnel</li>
+        <li>Dora Observatory (views into North Korea)</li>
+        <li>Dorasan Station (the northernmost station in South Korea)</li>
+        <li>Imjingak Park</li>
+      </ul>
+      Bring your passport. No large cameras allowed in tunnels.
+    </div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=DMZ+Tour+departure+Seoul" target="_blank" class="maps-link">📍 Tour Departure</a>
+      <a href="https://map.naver.com/p/search/DMZ+투어+서울출발" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="section-header">Late Lunch</div>
+
+<div class="event-card meal" data-dt="2026-07-30T15:00" data-lat="37.5659" data-lng="126.9918">
+  <div class="event-time">15:00</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag meal">🍲 Late Lunch</span></div>
+    <div class="event-name">Oegojip Seolleongtang</div>
+    <div class="event-notes">Milky white ox bone broth soup (설렁탕) simmered for hours. Rich, comforting, and perfect after a long morning tour. Season to taste with salt and green onion.</div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=Oegojip+Seolleongtang+Seoul" target="_blank" class="maps-link">📍 Oegojip</a>
+      <a href="https://map.naver.com/p/search/외곰집설렁탕" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="section-header">Afternoon — Euljiro Area</div>
+
+<div class="event-card afternoon" data-dt="2026-07-30T16:30" data-lat="37.5659" data-lng="126.9950">
+  <div class="event-time">16:30</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag activity">☕ Explore</span></div>
+    <div class="event-name">Euljiro — Cafes, Record Stores & Hidden Alleys</div>
+    <div class="event-notes">One of Seoul's coolest areas — industrial streets being turned into indie cafes, galleries and record shops hidden among printing workshops. Explore:
+      <ul>
+        <li>Third wave coffee cafes in old factories</li>
+        <li>Vinyl record stores (crates of K-pop and jazz)</li>
+        <li>Hidden back alleyways and neon-lit courtyards</li>
+      </ul>
+    </div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=Euljiro+Seoul+cafes" target="_blank" class="maps-link">📍 Euljiro Area</a>
+      <a href="https://map.naver.com/p/search/을지로+카페" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="section-header">Dinner</div>
+
+<div class="event-card meal" data-dt="2026-07-30T18:30" data-lat="37.5359" data-lng="127.0063">
+  <div class="event-time">18:30</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag meal">🍗 Dinner</span></div>
+    <div class="event-name">한남동한방통닭 — Hannam Oriental Rotisserie Chicken</div>
+    <div class="event-notes">Slow-roasted whole chicken with Korean herbal spices. Crispy skin, juicy meat, incredible flavour. The Hannam neighbourhood is also worth a wander after dinner.</div>
+    <div class="event-links">
+      <a href="https://share.google/zvcIu85n4XwzPMgQ8" target="_blank" class="maps-link">📍 Google Maps</a>
+      <a href="https://map.naver.com/p/search/한남동한방통닭" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="note-box"><strong>Breakfast included</strong> at hotel. · <strong>Pack light</strong> for the DMZ — security checks at the zone. Passport required. · Last full day in Seoul before Jeju!</div>
+```

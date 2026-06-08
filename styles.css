@@ -1,0 +1,368 @@
+/* ====================================================
+   Korea Trip 2026 — Custom Styles
+   ==================================================== */
+
+:root {
+  --clock-h: 38px;
+  --red: #C62828;
+  --red-light: #FFEBEE;
+  --blue: #1565C0;
+  --blue-light: #E3F2FD;
+  --green: #2E7D32;
+  --green-light: #E8F5E9;
+  --orange: #E65100;
+  --orange-light: #FFF3E0;
+  --purple: #6A1B9A;
+  --purple-light: #F3E5F5;
+  --gray: #455A64;
+  --gray-light: #ECEFF1;
+  --text: #212121;
+  --muted: #757575;
+  --radius: 10px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-hover: 0 6px 20px rgba(0,0,0,0.13);
+}
+
+/* ── Clock bar ─────────────────────────────────── */
+#kst-clock-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--clock-h);
+  z-index: 9999;
+  background: var(--red);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  gap: 12px;
+}
+#kst-time-block { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+#kst-date { opacity: 0.8; font-weight: 400; }
+#next-up-bar {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 60%;
+  text-align: right;
+  opacity: 0.92;
+  font-size: 11.5px;
+}
+
+/* ── Layout: clock bar (38px) sits above the Quarto navbar (~56px) ── */
+
+/* 1. Push the fixed Quarto navbar down below the clock bar */
+.navbar.fixed-top,
+.navbar-fixed-top,
+nav.navbar {
+  top: var(--clock-h) !important;
+}
+
+/* 2. Body padding = clock bar (38px) + navbar (~56px) + breathing room */
+body {
+  padding-top: 110px !important;
+}
+
+/* ── Day hero ──────────────────────────────────── */
+.day-hero {
+  padding: 36px 4px 24px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #EEEEEE;
+}
+.day-badge {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+.day-hero h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 6px;
+  color: var(--text);
+  line-height: 1.2;
+}
+.day-subtitle {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ── Section headers ───────────────────────────── */
+.section-header {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: var(--muted);
+  margin: 28px 0 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+/* ── Event cards ───────────────────────────────── */
+.event-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  margin: 8px 0;
+  border-radius: var(--radius);
+  border-left: 4px solid var(--gray);
+  background: #fff;
+  box-shadow: var(--shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  position: relative;
+}
+.event-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Category colours */
+.event-card.transport  { border-color: var(--gray);   background: #FAFBFB; }
+.event-card.morning    { border-color: #42A5F5;        background: #FAFCFF; }
+.event-card.afternoon  { border-color: #FFA726;        background: #FFFCF7; }
+.event-card.evening    { border-color: var(--purple);  background: #FDF8FF; }
+.event-card.late-night { border-color: #5C6BC0;        background: #F8F8FF; }
+.event-card.meal       { border-color: #43A047;        background: #FAFFF8; }
+.event-card.shopping   { border-color: #EC407A;        background: #FFF8FB; }
+.event-card.activity   { border-color: var(--blue);    background: #FAFCFF; }
+
+/* Next-up highlight */
+.event-card.is-next {
+  border-width: 4px;
+  box-shadow: 0 0 0 3px rgba(198,40,40,0.3), 0 6px 20px rgba(198,40,40,0.18);
+  animation: pulse-card 2.4s ease-in-out infinite;
+}
+@keyframes pulse-card {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(198,40,40,0.3), 0 6px 20px rgba(198,40,40,0.18); }
+  50%       { box-shadow: 0 0 0 7px rgba(198,40,40,0.12), 0 6px 24px rgba(198,40,40,0.25); }
+}
+.next-up-pill {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 7px;
+}
+
+/* Time badge */
+.event-time {
+  min-width: 46px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+  padding-top: 2px;
+  white-space: nowrap;
+}
+
+/* Card body */
+.event-body { flex: 1; min-width: 0; }
+
+/* Tags */
+.event-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 5px; }
+.tag {
+  font-size: 9.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.tag.booked    { background: var(--red);    color: #fff; }
+.tag.tbd       { background: #FFF9C4;       color: #F57F17; }
+.tag.transport { background: var(--gray-light); color: var(--gray); }
+.tag.meal      { background: #C8E6C9;       color: var(--green); }
+.tag.shopping  { background: #FCE4EC;       color: #880E4F; }
+.tag.activity  { background: var(--blue-light); color: var(--blue); }
+.tag.note      { background: #FFF3E0;       color: var(--orange); }
+
+/* Event name */
+.event-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+
+/* Notes */
+.event-notes {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin: 0 0 8px;
+  line-height: 1.55;
+}
+.event-notes ul {
+  margin: 4px 0 0 16px;
+  padding: 0;
+}
+.event-notes ul li { margin: 2px 0; }
+
+/* Links row */
+.event-links { display: flex; flex-wrap: wrap; gap: 6px; }
+.maps-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: none;
+  padding: 4px 11px;
+  border: 1.5px solid var(--blue);
+  border-radius: 20px;
+  transition: background 0.16s, color 0.16s;
+}
+.maps-link:hover { background: var(--blue); color: #fff; text-decoration: none; }
+.naver-link { color: #03C75A; border-color: #03C75A; }
+.naver-link:hover { background: #03C75A; color: #fff; }
+
+/* ── Leaflet map container ─────────────────────── */
+.day-map {
+  height: 280px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 16px 0 22px;
+  border: 1px solid #E0E0E0;
+  box-shadow: var(--shadow);
+}
+.overview-map {
+  height: 380px;
+}
+
+/* ── Overview page ─────────────────────────────── */
+.trip-hero {
+  background: linear-gradient(135deg, #C62828 0%, #8B0000 100%);
+  color: #fff;
+  border-radius: 16px;
+  padding: 44px 36px 40px;
+  margin-bottom: 32px;
+  margin-top: 8px;
+}
+.trip-hero h1 { font-size: 2.4rem; font-weight: 900; margin: 0 0 6px; }
+.trip-hero .subtitle { font-size: 15px; opacity: 0.88; }
+.trip-hero .dates { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; opacity: 0.75; margin-bottom: 4px; }
+
+.stats-row {
+  display: flex;
+  gap: 16px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+.stat-card {
+  flex: 1;
+  min-width: 110px;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border-top: 3px solid var(--red);
+}
+.stat-number { font-size: 28px; font-weight: 800; color: var(--red); line-height: 1; }
+.stat-label  { font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 4px; }
+
+/* City section pills */
+.city-pill {
+  display: inline-block;
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-right: 8px;
+}
+.city-pill.seoul  { background: var(--red-light);    color: var(--red); }
+.city-pill.jeju   { background: var(--blue-light);   color: var(--blue); }
+.city-pill.busan  { background: var(--green-light);  color: var(--green); }
+
+/* Day grid on overview */
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+.day-tile {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--text);
+  border-left: 4px solid var(--gray-light);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.day-tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); color: var(--text); text-decoration: none; }
+.day-tile.seoul  { border-color: var(--red); }
+.day-tile.jeju   { border-color: var(--blue); }
+.day-tile.busan  { border-color: var(--green); }
+.day-tile.return { border-color: #8B0000; }
+.day-tile .tile-date  { font-size: 10.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; }
+.day-tile .tile-title { font-size: 13.5px; font-weight: 700; margin-top: 4px; line-height: 1.3; }
+.day-tile .tile-emoji { font-size: 22px; margin-bottom: 6px; }
+
+/* ── Utility ───────────────────────────────────── */
+.note-box {
+  background: #FFFDE7;
+  border-left: 4px solid #F9A825;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #555;
+  margin: 16px 0;
+}
+.note-box strong { color: #E65100; }
+
+/* ── Card → Map interaction ────────────────────── */
+.event-card[data-lat] { cursor: pointer; }
+.event-card[data-lat]:hover {
+  border-color: var(--red) !important;
+  box-shadow: 0 0 0 2px rgba(198,40,40,0.15), var(--shadow-hover) !important;
+}
+@keyframes markerPop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(2.4); }
+  100% { transform: scale(1); }
+}
+.marker-highlight {
+  animation: markerPop 0.65s cubic-bezier(.36,2,.6,1) forwards !important;
+  z-index: 9999 !important;
+}
+
+/* ── Mobile ────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Clock bar is slimmer on mobile — reduce total body offset */
+  body { padding-top: 96px !important; }
+  .event-card { flex-direction: column; gap: 6px; }
+  .event-time { font-size: 12px; }
+  .day-hero h1 { font-size: 1.5rem; }
+  .day-map { height: 210px; }
+  .overview-map { height: 260px; }
+  #kst-clock-bar { font-size: 11px; padding: 5px 12px; }
+  #next-up-bar { max-width: 50%; }
+  .trip-hero { padding: 28px 20px; }
+  .trip-hero h1 { font-size: 1.8rem; }
+  .stat-card { min-width: 90px; padding: 14px 10px; }
+  .stat-number { font-size: 22px; }
+  .day-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .day-grid { grid-template-columns: 1fr; }
+  .stats-row { gap: 10px; }
+}

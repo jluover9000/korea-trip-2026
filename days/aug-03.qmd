@@ -1,0 +1,142 @@
+---
+title: "Aug 3 — South Jeju"
+---
+
+```{=html}
+<div class="day-hero">
+  <div class="day-badge">Monday · August 3, 2026 · Day 9 of 15</div>
+  <h1 class="day-title">South Jeju 🍵</h1>
+  <div class="day-subtitle">📍 Yeomiji Botanical Garden · Osulloc Tea Museum · Comma Cafe · Jeju</div>
+</div>
+```
+
+```{=html}
+<div id="map-aug03" class="day-map"></div>
+<script>
+(function() {
+  var map = L.map('map-aug03').setView([33.3300, 126.3500], 12);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OSM</a>'
+  }).addTo(map);
+  function dot(c) {
+    return L.divIcon({ className:'', html:'<div style="width:13px;height:13px;border-radius:50%;background:'+c+';border:2.5px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.4)"></div>', iconSize:[13,13], iconAnchor:[6,6], popupAnchor:[0,-8] });
+  }
+  function hotelDot() {
+    return L.divIcon({ className:'', html:'<div style="width:22px;height:22px;border-radius:50%;background:#4A148C;border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1;color:#fff">★</div>', iconSize:[22,22], iconAnchor:[11,11], popupAnchor:[0,-13] });
+  }
+  var pts = [
+    { name:'🏨 Grabel Hotel Jeju', lat:33.4996, lng:126.5312, hotel:true, url:'https://www.google.com/maps/search/?api=1&query=Grabel+Hotel+Jeju' },
+    { name:'Yeomiji Botanical Garden 🌸', lat:33.3059, lng:126.3130, c:'#43A047', url:'https://www.google.com/maps/search/?api=1&query=Yeomiji+Botanical+Garden+Jeju' },
+    { name:'Jeju Sun Buckwheat Noodles 🍜', lat:33.3100, lng:126.3200, c:'#43A047', url:'https://www.google.com/maps/search/?api=1&query=Jeju+buckwheat+noodles+restaurant' },
+    { name:'Osulloc Tea Museum 🍵', lat:33.3059, lng:126.2892, c:'#2E7D32', url:'https://www.google.com/maps/search/?api=1&query=Osulloc+Tea+Museum+Jeju' },
+    { name:'Comma Cafe ☕', lat:33.3100, lng:126.2900, c:'#AB47BC', url:'https://www.google.com/maps/search/?api=1&query=Comma+cafe+Jeju+west' },
+  ];
+  window.pageMap = map; window.pageMarkers = [];
+  pts.forEach(function(p) {
+    var m = L.marker([p.lat, p.lng], { icon: p.hotel ? hotelDot() : dot(p.c) }).addTo(map);
+    var html = '<b>' + p.name + '</b>';
+    if (p.url) html += '<br><a href="' + p.url + '" target="_blank" style="font-size:12px">Open in Maps →</a>';
+    m.bindPopup(html);
+    window.pageMarkers.push({ marker: m, lat: p.lat, lng: p.lng });
+  });
+})();
+</script>
+```
+
+```{=html}
+<div class="section-header">Morning</div>
+
+<div class="event-card morning" data-dt="2026-08-03T09:30" data-lat="33.3059" data-lng="126.3130">
+  <div class="event-time">09:30</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag activity">🌸 Garden</span></div>
+    <div class="event-name">Yeomiji Botanical Garden</div>
+    <div class="event-notes">Asia's largest botanical garden with 3,800+ species across themed greenhouses (tropical, subtropical, Mediterranean, desert) and beautiful outdoor gardens. The glass pyramids and cactus house are highlights. Entry ~₩14,000. Allow 2 hours.</div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=Yeomiji+Botanical+Garden+Jeju" target="_blank" class="maps-link">📍 Yeomiji</a>
+      <a href="https://map.naver.com/p/search/여미지식물원" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="section-header">Lunch</div>
+
+<div class="event-card meal" data-dt="2026-08-03T12:00" data-lat="33.3100" data-lng="126.3200">
+  <div class="event-time">12:00</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag meal">🍜 Lunch</span></div>
+    <div class="event-name">Jeju Sun Buckwheat Noodles (메밀국수)</div>
+    <div class="event-notes">Jeju-style buckwheat noodles in a light broth — a regional specialty. The noodles are hand-made and the flavour is earthy and nutty. Perfect light lunch before the tea museum.</div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=Jeju+buckwheat+noodles+메밀국수" target="_blank" class="maps-link">📍 Buckwheat Noodles</a>
+      <a href="https://map.naver.com/p/search/제주+메밀국수" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="section-header">Afternoon — Tea Country</div>
+
+<div class="event-card afternoon" data-dt="2026-08-03T14:00" data-lat="33.3059" data-lng="126.2892">
+  <div class="event-time">14:00</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag activity">🍵 Museum</span></div>
+    <div class="event-name">Osulloc Tea Museum</div>
+    <div class="event-notes">Korea's premier green tea museum set amid rolling tea plantations. The museum covers 4,000 years of Korean tea culture. Surrounded by Innisfree's green tea fields (same company). Must-try:
+      <ul>
+        <li>Osulloc green tea ice cream (삼다도 아이스크림)</li>
+        <li>Fresh brewed premium green tea</li>
+        <li>Tea field walk for photos</li>
+      </ul>
+      Free admission to museum grounds and gardens. In-store experiences cost extra.
+    </div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=Osulloc+Tea+Museum+Jeju" target="_blank" class="maps-link">📍 Osulloc</a>
+      <a href="https://map.naver.com/p/search/오설록티뮤지엄" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+    </div>
+  </div>
+</div>
+
+<div class="event-card afternoon" data-dt="2026-08-03T16:30" data-lat="33.3100" data-lng="126.2900">
+  <div class="event-time">16:30</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag meal">☕ Cafe</span></div>
+    <div class="event-name">Comma Cafe</div>
+    <div class="event-notes">A peaceful, scenic cafe in the west Jeju area. Good for an afternoon coffee and dessert with views over the tea fields or coastal landscape.</div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=Comma+cafe+Jeju" target="_blank" class="maps-link">📍 Comma Cafe</a>
+      <a href="https://map.naver.com/p/search/콤마카페+제주" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="section-header">Dinner</div>
+
+<div class="event-card meal" data-dt="2026-08-03T19:00" data-lat="33.4996" data-lng="126.5312">
+  <div class="event-time">19:00</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag tbd">FREE NIGHT</span><span class="tag meal">🍽️ Dinner</span></div>
+    <div class="event-name">Free Night — Explore Jeju City</div>
+    <div class="event-notes">Final evening in Jeju! Options:
+      <ul>
+        <li>Jeju-style BBQ or galchi (hairtail fish) near the hotel</li>
+        <li>Dongmun Night Market revisit</li>
+        <li>Seafood raw fish restaurant (회) along the coast</li>
+      </ul>
+    </div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=Jeju+City+restaurants+for+dinner" target="_blank" class="maps-link">📍 Find Dinner</a>
+      <a href="https://map.naver.com/p/search/제주시+저녁+맛집" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="note-box">Last night in Jeju! Check out tomorrow morning — flight to Busan at 13:00. <strong>Pack tonight</strong> and return rental car to Jeju One Car near airport before check-in.</div>
+```

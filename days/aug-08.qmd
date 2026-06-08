@@ -1,0 +1,197 @@
+---
+title: "Aug 8 — Final Seoul Day"
+---
+
+```{=html}
+<div class="day-hero">
+  <div class="day-badge">Saturday · August 8, 2026 · Day 14 of 15</div>
+  <h1 class="day-title">Final Seoul Day 🛍️</h1>
+  <div class="day-subtitle">📍 COEX · K-pop Pilgimage · 논현삼계탕 · Last Shopping · 설매네 · Lotte Tower Night · Seoul</div>
+</div>
+```
+
+```{=html}
+<div id="map-aug08" class="day-map"></div>
+<script>
+(function() {
+  var map = L.map('map-aug08').setView([37.5200, 127.0550], 12);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OSM</a>'
+  }).addTo(map);
+  function dot(c) {
+    return L.divIcon({ className:'', html:'<div style="width:13px;height:13px;border-radius:50%;background:'+c+';border:2.5px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.4)"></div>', iconSize:[13,13], iconAnchor:[6,6], popupAnchor:[0,-8] });
+  }
+  function hotelDot() {
+    return L.divIcon({ className:'', html:'<div style="width:22px;height:22px;border-radius:50%;background:#4A148C;border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1;color:#fff">★</div>', iconSize:[22,22], iconAnchor:[11,11], popupAnchor:[0,-13] });
+  }
+  var pts = [
+    { name:'🏨 Shilla Stay Seodaemun Seoul Station', lat:37.5572, lng:126.9680, hotel:true, url:'https://www.google.com/maps/search/?api=1&query=Shilla+Stay+Seodaemun+Seoul+Station' },
+    { name:'COEX & Starfield Library 📚', lat:37.5126, lng:127.0594, c:'#1565C0', url:'https://www.google.com/maps/search/?api=1&query=COEX+Starfield+Library+Seoul' },
+    { name:'HYBE Headquarters 🎵', lat:37.5073, lng:127.0391, c:'#C62828', url:'https://www.google.com/maps/search/?api=1&query=HYBE+Headquarters+Seoul' },
+    { name:'SM Entertainment 🎤', lat:37.5178, lng:127.0429, c:'#E53935', url:'https://www.google.com/maps/search/?api=1&query=SM+Entertainment+Seoul' },
+    { name:'JYP Entertainment 🎵', lat:37.5193, lng:127.0282, c:'#FFA726', url:'https://www.google.com/maps/search/?api=1&query=JYP+Entertainment+Seoul' },
+    { name:'YG Entertainment 🎵', lat:37.5795, lng:126.9460, c:'#212121', url:'https://www.google.com/maps/search/?api=1&query=YG+Entertainment+Seoul' },
+    { name:'논현삼계탕 🍗 (Lunch)', lat:37.5161, lng:127.0299, c:'#43A047', url:'https://www.google.com/maps/search/?api=1&query=논현삼계탕+Nonhyeon+Seoul' },
+    { name:'설매네 🍽️ (Final Dinner)', lat:37.5636, lng:126.9834, c:'#C62828', url:'https://www.google.com/maps/search/?api=1&query=설매네+Seoul' },
+    { name:'Lotte World Tower 🌃', lat:37.5126, lng:127.1021, c:'#8B0000', url:'https://www.google.com/maps/search/?api=1&query=Lotte+World+Tower+Seoul+Sky' },
+  ];
+  window.pageMap = map; window.pageMarkers = [];
+  pts.forEach(function(p) {
+    var m = L.marker([p.lat, p.lng], { icon: p.hotel ? hotelDot() : dot(p.c) }).addTo(map);
+    var html = '<b>' + p.name + '</b>';
+    if (p.url) html += '<br><a href="' + p.url + '" target="_blank" style="font-size:12px">Open in Maps →</a>';
+    m.bindPopup(html);
+    window.pageMarkers.push({ marker: m, lat: p.lat, lng: p.lng });
+  });
+})();
+</script>
+```
+
+```{=html}
+<div class="section-header">Breakfast — Shilla Stay Seodaemun</div>
+
+<div class="event-card morning" data-dt="2026-08-08T07:00" data-lat="37.5572" data-lng="126.9680">
+  <div class="event-time">07:00–10:30</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag booked">INCLUDED ✓</span><span class="tag meal">🍳 Breakfast Buffet</span></div>
+    <div class="event-name">CAFE B1F — Breakfast Buffet · Weekend Hours</div>
+    <div class="event-notes">Full breakfast buffet included. Located on the <strong>B1F</strong>.
+      <table style="margin-top:8px;border-collapse:collapse;width:100%;font-size:13px">
+        <tr style="background:#f5f5f5"><th style="padding:4px 8px;text-align:left">Day</th><th style="padding:4px 8px;text-align:right">Hours</th><th style="padding:4px 8px;text-align:right">Adult</th><th style="padding:4px 8px;text-align:right">Child</th></tr>
+        <tr><td style="padding:4px 8px">Weekend</td><td style="padding:4px 8px;text-align:right">07:00–10:30</td><td style="padding:4px 8px;text-align:right">₩23,000</td><td style="padding:4px 8px;text-align:right">₩15,000</td></tr>
+      </table>
+      <ul style="margin-top:8px">
+        <li>Breakfast included in your booking — no extra charge</li>
+        <li>Kitchen closes strictly at 10:30 — don't sleep in too late</li>
+      </ul>
+    </div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=Shilla+Stay+Seodaemun+Seoul+Station" target="_blank" class="maps-link">📍 Shilla Stay</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="section-header">Morning — COEX</div>
+
+<div class="event-card morning" data-dt="2026-08-08T10:00" data-lat="37.5126" data-lng="127.0594">
+  <div class="event-time">10:00</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag activity">📚 Library</span></div>
+    <div class="event-name">COEX Starfield Library</div>
+    <div class="event-notes">Seoul's famous two-storey open bookshelves — thousands of books lining enormous walls inside COEX Mall. A stunning architectural Instagram spot. Free entry. COEX Mall itself is one of Asia's largest underground shopping centres — good for last-minute brand shopping.</div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=COEX+Starfield+Library+Seoul" target="_blank" class="maps-link">📍 COEX</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="section-header">K-pop Pilgrimage</div>
+
+<div class="event-card morning" data-dt="2026-08-08T11:00" data-lat="37.5073" data-lng="127.0391">
+  <div class="event-time">11:00</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag activity">🎵 K-pop</span></div>
+    <div class="event-name">K-pop Company Buildings</div>
+    <div class="event-notes">Fan pilgrimage tour of the major K-pop entertainment buildings. Most are in Gangnam / Apgujeong area:
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=HYBE+Headquarters+Yongsan+Seoul" target="_blank"><strong>HYBE</strong></a> (BTS, TXT, NewJeans) — Yongsan</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=SM+Entertainment+Seolleung+Seoul" target="_blank"><strong>SM Entertainment</strong></a> (EXO, aespa, SHINee) — Seolleung</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=JYP+Entertainment+Seoul" target="_blank"><strong>JYP</strong></a> (TWICE, Stray Kids, NMIXX) — Cheongdam</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=YG+Entertainment+Seoul" target="_blank"><strong>YG</strong></a> (BLACKPINK, BIGBANG) — Hapjeong</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Starship+Entertainment+Seoul" target="_blank"><strong>Starship</strong></a> (MONSTA X, CRAVITY)</li>
+      </ul>
+      Most are just the buildings — no tours usually. Some have fan café areas nearby.
+    </div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=K-pop+entertainment+companies+Seoul" target="_blank" class="maps-link">📍 Find All</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="section-header">Lunch</div>
+
+<div class="event-card meal" data-dt="2026-08-08T13:00" data-lat="37.5161" data-lng="127.0299">
+  <div class="event-time">13:00</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag meal">🍗 Lunch</span></div>
+    <div class="event-name">논현삼계탕 본점 — Samgyetang</div>
+    <div class="event-notes">Famous samgyetang (ginseng chicken soup) restaurant in Nonhyeon. Whole young chicken stuffed with rice, ginseng, jujube, and garlic in a nourishing broth. A classic Korean restorative meal — great before a big final shopping day.</div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=논현삼계탕+본점+Nonhyeon+Seoul" target="_blank" class="maps-link">📍 논현삼계탕</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="section-header">Afternoon — Final Shopping</div>
+
+<div class="event-card shopping" data-dt="2026-08-08T14:30" data-lat="37.5178" data-lng="127.0429">
+  <div class="event-time">14:30</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag shopping">🛍️ Final Shopping</span></div>
+    <div class="event-name">Anything Missed — Luxury Beauty Round 2</div>
+    <div class="event-notes">Last chance for any missed brands. Check:
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Hera+Beauty+Seoul" target="_blank">Hera</a> — Korean luxury cosmetics</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Jung+Saem+Mool+Seoul" target="_blank">Jung Saem Mool</a> — celebrity makeup artist brand</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Heart+Percent+Seoul" target="_blank">Heart Percent</a> — indie makeup brand</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=The+Saem+Seoul" target="_blank">The Saem</a> — skincare and makeup</li>
+        <li>Final Olive Young top-up</li>
+        <li>Tamburins (if you missed Garosugil)</li>
+      </ul>
+    </div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=Korean+beauty+shopping+Gangnam+Seoul" target="_blank" class="maps-link">📍 Gangnam Beauty</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="section-header">Dinner</div>
+
+<div class="event-card meal" data-dt="2026-08-08T19:00" data-lat="37.5636" data-lng="126.9834">
+  <div class="event-time">19:00</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag meal">🍽️ Final Korea Dinner</span></div>
+    <div class="event-name">설매네 — Final Korea Meal</div>
+    <div class="event-notes">Your last proper Korean dinner! Make it count.</div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=설매네+Seoul+restaurant" target="_blank" class="maps-link">📍 설매네</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="section-header">Evening</div>
+
+<div class="event-card evening" data-dt="2026-08-08T20:30" data-lat="37.5126" data-lng="127.1021">
+  <div class="event-time">20:30</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag activity">🌃 Night View</span></div>
+    <div class="event-name">Lotte World Tower — Seoul Sky</div>
+    <div class="event-notes">Korea's tallest building (555m) with Seoul Sky Observatory on floors 117–123. Breathtaking night views over Seoul's glittering skyline — a perfect finale to the trip. Includes glass-floored sky bridge.
+      <ul>
+        <li>Book tickets in advance online to skip queues</li>
+        <li>Best visited after dark for city lights</li>
+        <li>Entry ~₩29,000</li>
+      </ul>
+    </div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=Lotte+World+Tower+Seoul+Sky+Observatory" target="_blank" class="maps-link">📍 Lotte Tower</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="note-box"><strong>Last night in Korea!</strong> Flight tomorrow at 17:45. Pack tonight — check-out and head to airport by early afternoon. Don't forget: Birch Coffee brunch in the morning!</div>
+```

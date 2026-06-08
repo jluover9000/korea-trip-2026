@@ -1,0 +1,201 @@
+---
+title: "Korea Trip 2026"
+---
+
+```{=html}
+<div class="trip-hero">
+  <div class="dates">July 26 – August 9, 2026</div>
+  <h1>🇰🇷 Korea 2026</h1>
+  <div class="subtitle">Seoul &nbsp;·&nbsp; Jeju &nbsp;·&nbsp; Busan &nbsp;·&nbsp; 15 days of food, culture & adventure</div>
+</div>
+
+<div class="stats-row">
+  <div class="stat-card">
+    <div class="stat-number">15</div>
+    <div class="stat-label">Days</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">3</div>
+    <div class="stat-label">Cities</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">4</div>
+    <div class="stat-label">Flights</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">30+</div>
+    <div class="stat-label">Meals</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">∞</div>
+    <div class="stat-label">Memories</div>
+  </div>
+</div>
+```
+
+```{=html}
+<!-- Overview Map -->
+<div class="section-header">Trip Route</div>
+<div id="overview-map" class="day-map overview-map"></div>
+<script>
+(function() {
+  var map = L.map('overview-map').setView([36.5, 127.8], 7);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+
+  function dot(color) {
+    return L.divIcon({
+      className: '',
+      html: '<div style="width:14px;height:14px;border-radius:50%;background:' + color + ';border:2.5px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,0.4)"></div>',
+      iconSize: [14, 14], iconAnchor: [7, 7], popupAnchor: [0, -10]
+    });
+  }
+  function hotelDot() {
+    return L.divIcon({ className:'', html:'<div style="width:22px;height:22px;border-radius:50%;background:#4A148C;border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1;color:#fff">★</div>', iconSize:[22,22], iconAnchor:[11,11], popupAnchor:[0,-13] });
+  }
+
+  var cities = [
+    { name: '✈️ Vancouver (YVR) → Seoul', lat: 37.5547, lng: 126.9706, color: '#C62828', url: '' },
+    { name: '🏨 Seoul · Shilla Stay Seodaemun\nJul 27–30', lat: 37.5572, lng: 126.9680, hotel: true, url: 'https://www.google.com/maps/search/?api=1&query=Shilla+Stay+Seodaemun+Seoul' },
+    { name: '🌸 Myeongdong', lat: 37.5636, lng: 126.9834, color: '#E53935', url: 'https://www.google.com/maps/search/?api=1&query=Myeongdong+Seoul' },
+    { name: '🛍️ Garosugil / Sinsa · Gangnam', lat: 37.5178, lng: 127.0194, color: '#E53935', url: 'https://www.google.com/maps/search/?api=1&query=Garosugil+Sinsa+Seoul' },
+    { name: '👘 Gyeongbokgung Palace', lat: 37.5796, lng: 126.9770, color: '#E53935', url: 'https://www.google.com/maps/search/?api=1&query=Gyeongbokgung+Palace' },
+    { name: '🪖 DMZ', lat: 37.9355, lng: 126.6783, color: '#795548', url: 'https://www.google.com/maps/search/?api=1&query=DMZ+Korea' },
+    { name: '🏨 Jeju · Grabel Hotel\nJul 31–Aug 3', lat: 33.4996, lng: 126.5312, hotel: true, url: 'https://www.google.com/maps/search/?api=1&query=Grabel+Hotel+Jeju' },
+    { name: '🌅 Seongsan Ilchulbong', lat: 33.4583, lng: 126.9422, color: '#1976D2', url: 'https://www.google.com/maps/search/?api=1&query=Seongsan+Ilchulbong' },
+    { name: '🕍 Manjanggul Cave', lat: 33.5280, lng: 126.7718, color: '#1976D2', url: 'https://www.google.com/maps/search/?api=1&query=Manjanggul+Cave+Jeju' },
+    { name: '🍵 Osulloc Tea Museum', lat: 33.3059, lng: 126.2892, color: '#1976D2', url: 'https://www.google.com/maps/search/?api=1&query=Osulloc+Tea+Museum+Jeju' },
+    { name: '🏨 Busan · L7 Haeundae by Lotte Hotels\nAug 4–6', lat: 35.1620, lng: 129.1601, hotel: true, url: 'https://www.google.com/maps/search/?api=1&query=L7+Haeundae+by+Lotte+Hotels+Busan' },
+    { name: '🎨 Gamcheon Culture Village', lat: 35.0975, lng: 129.0147, color: '#43A047', url: 'https://www.google.com/maps/search/?api=1&query=Gamcheon+Culture+Village+Busan' },
+    { name: '🚄 KTX → Seoul', lat: 35.1010, lng: 129.0375, color: '#795548', url: '' },
+    { name: '🏨 Seoul · Shilla Stay Seodaemun\nAug 7–9', lat: 37.5572, lng: 126.9680, hotel: true, url: 'https://www.google.com/maps/search/?api=1&query=Shilla+Stay+Seodaemun+Seoul+Station' },
+    { name: '📚 COEX · Starfield Library', lat: 37.5126, lng: 127.0594, color: '#8B0000', url: 'https://www.google.com/maps/search/?api=1&query=COEX+Seoul' },
+    { name: '🌃 Lotte World Tower', lat: 37.5126, lng: 127.1021, color: '#8B0000', url: 'https://www.google.com/maps/search/?api=1&query=Lotte+World+Tower+Seoul' },
+  ];
+
+  cities.forEach(function(c) {
+    var m = L.marker([c.lat, c.lng], { icon: c.hotel ? hotelDot() : dot(c.color) }).addTo(map);
+    var html = '<b>' + c.name.replace(/\n/g,'<br>') + '</b>';
+    if (c.url) html += '<br><a href="' + c.url + '" target="_blank" style="font-size:12px">Open in Maps →</a>';
+    m.bindPopup(html);
+  });
+
+  // Draw rough route line
+  var route = cities.map(function(c) { return [c.lat, c.lng]; });
+  L.polyline(route, { color: '#C62828', weight: 2, opacity: 0.4, dashArray: '6,6' }).addTo(map);
+})();
+</script>
+```
+
+```{=html}
+<div class="section-header">Day by Day</div>
+
+<div class="day-grid">
+  <a href="days/jul-26.html" class="day-tile seoul">
+    <div class="tile-emoji">✈️</div>
+    <div class="tile-date">Sun · Jul 26</div>
+    <div class="tile-title">Departure from Vancouver</div>
+  </a>
+  <a href="days/jul-27.html" class="day-tile seoul">
+    <div class="tile-emoji">🛬</div>
+    <div class="tile-date">Mon · Jul 27</div>
+    <div class="tile-title">Arrive Seoul · Myeongdong</div>
+  </a>
+  <a href="days/jul-28.html" class="day-tile seoul">
+    <div class="tile-emoji">💅</div>
+    <div class="tile-date">Tue · Jul 28</div>
+    <div class="tile-title">Gangnam Day</div>
+  </a>
+  <a href="days/jul-29.html" class="day-tile seoul">
+    <div class="tile-emoji">👘</div>
+    <div class="tile-date">Wed · Jul 29</div>
+    <div class="tile-title">Palace & Hanbok</div>
+  </a>
+  <a href="days/jul-30.html" class="day-tile seoul">
+    <div class="tile-emoji">🪖</div>
+    <div class="tile-date">Thu · Jul 30</div>
+    <div class="tile-title">DMZ + Euljiro</div>
+  </a>
+  <a href="days/jul-31.html" class="day-tile jeju">
+    <div class="tile-emoji">🌊</div>
+    <div class="tile-date">Fri · Jul 31</div>
+    <div class="tile-title">Seoul → Jeju</div>
+  </a>
+  <a href="days/aug-01.html" class="day-tile jeju">
+    <div class="tile-emoji">🌅</div>
+    <div class="tile-date">Sat · Aug 1</div>
+    <div class="tile-title">East Jeju</div>
+  </a>
+  <a href="days/aug-02.html" class="day-tile jeju">
+    <div class="tile-emoji">🌿</div>
+    <div class="tile-date">Sun · Aug 2</div>
+    <div class="tile-title">Nature Day · Caves & Craters</div>
+  </a>
+  <a href="days/aug-03.html" class="day-tile jeju">
+    <div class="tile-emoji">🍵</div>
+    <div class="tile-date">Mon · Aug 3</div>
+    <div class="tile-title">South Jeju · Tea Museum</div>
+  </a>
+  <a href="days/aug-04.html" class="day-tile busan">
+    <div class="tile-emoji">✈️</div>
+    <div class="tile-date">Tue · Aug 4</div>
+    <div class="tile-title">Jeju → Busan · Haeundae</div>
+  </a>
+  <a href="days/aug-05.html" class="day-tile busan">
+    <div class="tile-emoji">🏖️</div>
+    <div class="tile-date">Wed · Aug 5</div>
+    <div class="tile-title">Haeundae Day</div>
+  </a>
+  <a href="days/aug-06.html" class="day-tile busan">
+    <div class="tile-emoji">🦐</div>
+    <div class="tile-date">Thu · Aug 6</div>
+    <div class="tile-title">Busan Full Day</div>
+  </a>
+  <a href="days/aug-07.html" class="day-tile return">
+    <div class="tile-emoji">🚄</div>
+    <div class="tile-date">Fri · Aug 7</div>
+    <div class="tile-title">Busan → Seoul · Seongsu</div>
+  </a>
+  <a href="days/aug-08.html" class="day-tile return">
+    <div class="tile-emoji">🛍️</div>
+    <div class="tile-date">Sat · Aug 8</div>
+    <div class="tile-title">Final Seoul Day</div>
+  </a>
+  <a href="days/aug-09.html" class="day-tile return">
+    <div class="tile-emoji">✈️</div>
+    <div class="tile-date">Sun · Aug 9</div>
+    <div class="tile-title">Fly Home · 17:45 YVR</div>
+  </a>
+</div>
+```
+
+```{=html}
+<div class="section-header">Hotels</div>
+<div class="stats-row">
+  <div class="stat-card" style="text-align:left;border-color:#C62828">
+    <div style="font-size:11px;font-weight:700;color:#C62828;text-transform:uppercase;letter-spacing:.8px">Seoul · Jul 27–30</div>
+    <div style="font-weight:700;margin-top:4px">Shilla Stay Seodaemun Seoul Station</div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Shilla+Stay+Seodaemun+Seoul+Station" target="_blank" class="maps-link" style="margin-top:8px">📍 Map</a>
+  </div>
+  <div class="stat-card" style="text-align:left;border-color:#1565C0">
+    <div style="font-size:11px;font-weight:700;color:#1565C0;text-transform:uppercase;letter-spacing:.8px">Jeju · Jul 31–Aug 3</div>
+    <div style="font-weight:700;margin-top:4px">Grabel Hotel Jeju</div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Grabel+Hotel+Jeju" target="_blank" class="maps-link" style="margin-top:8px">📍 Map</a>
+  </div>
+  <div class="stat-card" style="text-align:left;border-color:#2E7D32">
+    <div style="font-size:11px;font-weight:700;color:#2E7D32;text-transform:uppercase;letter-spacing:.8px">Busan · Aug 4–6</div>
+    <div style="font-weight:700;margin-top:4px">L7 Haeundae by Lotte Hotels</div>
+    <a href="https://www.google.com/maps/search/?api=1&query=L7+Haeundae+by+Lotte+Hotels+Busan" target="_blank" class="maps-link" style="margin-top:8px">📍 Map</a>
+  </div>
+  <div class="stat-card" style="text-align:left;border-color:#8B0000">
+    <div style="font-size:11px;font-weight:700;color:#8B0000;text-transform:uppercase;letter-spacing:.8px">Seoul Return · Aug 7–9</div>
+    <div style="font-weight:700;margin-top:4px">Shilla Stay Seodaemun Seoul Station</div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Shilla+Stay+Seodaemun+Seoul+Station" target="_blank" class="maps-link" style="margin-top:8px">📍 Map</a>
+  </div>
+</div>
+
+<div class="note-box">
+  <strong>Note:</strong> Daily breakfast included at hotel. Luggage storage available at Seoul hotels on transit days.
+</div>
+```

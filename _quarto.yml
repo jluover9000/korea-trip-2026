@@ -1,0 +1,75 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "🇰🇷 Korea Trip 2026"
+  page-navigation: true
+  bread-crumbs: false
+
+  navbar:
+    background: "#C62828"
+    foreground: white
+    pinned: true
+    title: "🇰🇷 Korea Trip 2026"
+
+  sidebar:
+    style: "docked"
+    background: light
+    search: false
+    collapse-level: 1
+    contents:
+      - text: "🗺️ Trip Overview"
+        href: index.qmd
+      - section: "✈️ Seoul · Jul 26–30"
+        contents:
+          - text: "Jul 26 — Departure ✈️"
+            href: days/jul-26.qmd
+          - text: "Jul 27 — Arrive Seoul 🛬"
+            href: days/jul-27.qmd
+          - text: "Jul 28 — Gangnam Day 💅"
+            href: days/jul-28.qmd
+          - text: "Jul 29 — Palace & Hanbok 👘"
+            href: days/jul-29.qmd
+          - text: "Jul 30 — DMZ + Euljiro 🪖"
+            href: days/jul-30.qmd
+      - section: "🌊 Jeju · Jul 31–Aug 3"
+        contents:
+          - text: "Jul 31 — Seoul → Jeju ✈️"
+            href: days/jul-31.qmd
+          - text: "Aug 1 — East Jeju 🌅"
+            href: days/aug-01.qmd
+          - text: "Aug 2 — Nature Day 🌿"
+            href: days/aug-02.qmd
+          - text: "Aug 3 — South Jeju 🍵"
+            href: days/aug-03.qmd
+      - section: "🌊 Busan · Aug 4–6"
+        contents:
+          - text: "Aug 4 — Jeju → Busan ✈️"
+            href: days/aug-04.qmd
+          - text: "Aug 5 — Haeundae Day 🏖️"
+            href: days/aug-05.qmd
+          - text: "Aug 6 — Busan Full Day 🦐"
+            href: days/aug-06.qmd
+      - section: "🏙️ Seoul Return · Aug 7–9"
+        contents:
+          - text: "Aug 7 — Busan → Seoul 🚄"
+            href: days/aug-07.qmd
+          - text: "Aug 8 — Final Seoul Day 🛍️"
+            href: days/aug-08.qmd
+          - text: "Aug 9 — Fly Home ✈️"
+            href: days/aug-09.qmd
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: false
+    page-layout: full
+    link-external-newwindow: true
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+          <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    include-after-body:
+      - kst-clock.html
