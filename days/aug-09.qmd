@@ -55,6 +55,7 @@ title: "Aug 9 — Fly Home"
     <div class="event-notes">Final hotel breakfast before checkout. <strong>B1F · 07:00–10:30</strong> (Sunday). Breakfast included — no extra charge. Fuel up before the last morning in Seoul and the long flight home.</div>
     <div class="event-links">
       <a href="https://www.google.com/maps/search/?api=1&query=Shilla+Stay+Seodaemun+Seoul+Station" target="_blank" class="maps-link">📍 Shilla Stay</a>
+      <a href="https://map.naver.com/p/search/쉐라톤스테이서울역" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
@@ -71,6 +72,7 @@ title: "Aug 9 — Fly Home"
     <div class="event-notes">A lovely final Seoul coffee moment. Enjoy the last brunch before heading to the airport.</div>
     <div class="event-links">
       <a href="https://www.google.com/maps/search/?api=1&query=Birch+Coffee+Seoul" target="_blank" class="maps-link">📍 Birch Coffee</a>
+      <a href="https://map.naver.com/p/search/버치커피+서울" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
@@ -83,6 +85,7 @@ title: "Aug 9 — Fly Home"
     <div class="event-notes">One final crispy, buttery Korean salt bread before departure. Savour it.</div>
     <div class="event-links">
       <a href="https://www.google.com/maps/search/?api=1&query=salt+bread+sogeumppang+Myeongdong+Seoul" target="_blank" class="maps-link">📍 Find Salt Bread</a>
+      <a href="https://map.naver.com/p/search/소금빵+명동" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
@@ -99,6 +102,7 @@ title: "Aug 9 — Fly Home"
     <div class="event-notes">Last chance for K-beauty — stock up on anything you ran out of or forgot from the first visit. Tax refund available with passport at the counter.</div>
     <div class="event-links">
       <a href="https://www.google.com/maps/search/?api=1&query=Olive+Young+Myeongdong+Seoul" target="_blank" class="maps-link">📍 Olive Young</a>
+      <a href="https://map.naver.com/p/search/올리브영+명동" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
@@ -111,6 +115,7 @@ title: "Aug 9 — Fly Home"
     <div class="event-notes">Artisan Korean beauty and perfume brand — beautiful packaging, unique scents. A luxury souvenir for yourself or as gifts.</div>
     <div class="event-links">
       <a href="https://www.google.com/maps/search/?api=1&query=Tamburins+Seoul" target="_blank" class="maps-link">📍 Tamburins</a>
+      <a href="https://map.naver.com/p/search/탬버린즈+서울" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
@@ -132,6 +137,7 @@ title: "Aug 9 — Fly Home"
     </div>
     <div class="event-links">
       <a href="https://www.google.com/maps/search/?api=1&query=Korean+snacks+gifts+Myeongdong+Seoul" target="_blank" class="maps-link">📍 Find Snacks</a>
+      <a href="https://map.naver.com/p/search/명동+한국과자+기념품" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
@@ -148,6 +154,7 @@ title: "Aug 9 — Fly Home"
     <div class="event-notes">Take the AREX from Seoul Station to Incheon Airport. Express train: ~43 min (₩9,500). Arrive at the airport by 14:30 at the latest for a 17:45 departure (give yourself 3+ hours for international check-in and security). <strong>Don't forget tax refund claims at the airport before check-in.</strong></div>
     <div class="event-links">
       <a href="https://www.google.com/maps/search/?api=1&query=Seoul+Station+AREX" target="_blank" class="maps-link">📍 Seoul Station</a>
+      <a href="https://map.naver.com/p/search/서울역+공항철도" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>

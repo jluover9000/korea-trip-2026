@@ -103,6 +103,7 @@ title: "Aug 7 — Busan → Seoul"
     <div class="event-notes">Seoul's Brooklyn — converted warehouses turned into independent boutiques, concept stores, and cafes. Great for unique finds and designer Korean brands.</div>
     <div class="event-links">
       <a href="https://www.google.com/maps/search/?api=1&query=Seongsu+shopping+Seoul" target="_blank" class="maps-link">📍 Seongsu</a>
+      <a href="https://map.naver.com/p/search/성수동+쇼핑" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
@@ -119,6 +120,7 @@ title: "Aug 7 — Busan → Seoul"
     <div class="event-notes">Popular Seongsu bakery known for crispy pastry cream buns. Usually has a queue — get there early or during off-peak hours.</div>
     <div class="event-links">
       <a href="https://www.google.com/maps/search/?api=1&query=Ggupdang+Seongsu+Seoul" target="_blank" class="maps-link">📍 Ggupdang</a>
+      <a href="https://map.naver.com/p/search/끕당+성수" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
@@ -131,6 +133,7 @@ title: "Aug 7 — Busan → Seoul"
     <div class="event-notes">Seasonal fruit dessert cafe — elaborate fruit tarts, fruit shaved ice, and fruit-forward drinks. Beautiful and photogenic.</div>
     <div class="event-links">
       <a href="https://www.google.com/maps/search/?api=1&query=Rafre+Fruit+Dessert+Cafe+Seongsu" target="_blank" class="maps-link">📍 Rafre</a>
+      <a href="https://map.naver.com/p/search/라프레+과일디저트카페+성수" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
@@ -143,6 +146,7 @@ title: "Aug 7 — Busan → Seoul"
     <div class="event-notes">Specialty coffee and natural-focused cafe in the Seongsu area.</div>
     <div class="event-links">
       <a href="https://www.google.com/maps/search/?api=1&query=Soil+Tree+cafe+Seongsu+Seoul" target="_blank" class="maps-link">📍 Soil & Tree</a>
+      <a href="https://map.naver.com/p/search/소일앤트리+성수" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
