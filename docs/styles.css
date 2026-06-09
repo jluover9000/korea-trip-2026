@@ -346,6 +346,40 @@ body {
 }
 
 /* ── Mobile ────────────────────────────────────── */
+
+/* Hide the sidebar toggle from the navbar on desktop */
+@media (min-width: 992px) {
+  nav.navbar .quarto-btn-toggle { display: none !important; }
+}
+
+/* On mobile the sidebar toggle is moved into the navbar — hide the secondary nav */
+@media (max-width: 991px) {
+  .quarto-secondary-nav { display: none !important; }
+
+  /* Style the moved toggle button to match the white navbar */
+  nav.navbar .quarto-btn-toggle {
+    color: #fff !important;
+    font-size: 20px;
+    padding: 4px 10px;
+    background: none;
+    border: none;
+    opacity: 0.9;
+  }
+  nav.navbar .quarto-btn-toggle:hover { opacity: 1; }
+
+  /* Open sidebar starts below clock bar (38px) + navbar (~56px) = ~95px */
+  .sidebar.sidebar-navigation.show,
+  .sidebar.sidebar-navigation.collapsing {
+    top: 95px !important;
+    height: calc(100vh - 95px) !important;
+  }
+  /* Glass overlay follows the same top offset */
+  #quarto-sidebar-glass.show,
+  #quarto-sidebar-glass.collapsing {
+    top: 95px !important;
+  }
+}
+
 @media (max-width: 768px) {
   /* Clock bar is slimmer on mobile — reduce total body offset */
   body { padding-top: 96px !important; }

@@ -5,7 +5,8 @@
       "Bash(open /Users/jacksonlu/Documents/GitHub/korea-trip-2026/_site/days/jul-26.html)",
       "WebSearch",
       "WebFetch(domain:www.theseoulguide.com)",
-      "Bash(open /Users/jacksonlu/Documents/GitHub/korea-trip-2026/_site/days/jul-27.html)"
+      "Bash(open /Users/jacksonlu/Documents/GitHub/korea-trip-2026/_site/days/jul-27.html)",
+      "Bash(python3 *)"
     ]
   }
 }

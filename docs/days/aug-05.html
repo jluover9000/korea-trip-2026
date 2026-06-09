@@ -606,10 +606,21 @@ ul.task-list li input[type="checkbox"] {
     if (mapEl) mapEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
 
+  /* On mobile: move sidebar toggle button into the navbar next to search */
+  function moveSidebarToggle() {
+    if (window.innerWidth >= 992) return;
+    var toggle = document.querySelector('.quarto-secondary-nav .quarto-btn-toggle');
+    var search = document.querySelector('nav.navbar #quarto-search');
+    if (toggle && search) {
+      search.parentNode.insertBefore(toggle, search);
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', function() {
     tick();
     setInterval(tick, 1000);
     highlightNextCard();
+    moveSidebarToggle();
   });
 })();
 </script>
