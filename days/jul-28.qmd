@@ -26,21 +26,40 @@ title: "Jul 28 — Gangnam Day"
   }
   var pts = [
     { name:'🏨 Shilla Stay Seodaemun Seoul Station', lat:37.5572, lng:126.9680, hotel:true, url:'https://www.google.com/maps/search/?api=1&query=Shilla+Stay+Seodaemun+Seoul+Station' },
-    { name:'VIC Lab Color Analysis 🎨 (Booked)', lat:37.5222, lng:127.0277, c:'#C62828', url:'https://www.google.com/maps/search/?api=1&query=VIC+Lab+Gangnam+Seoul' },
-    { name:'Mangwon Market 🍜', lat:37.5551, lng:126.9046, c:'#43A047', url:'https://www.google.com/maps/search/?api=1&query=Mangwon+Market+Seoul' },
-    { name:'Garosugil / Sinsa 🛍️', lat:37.5178, lng:127.0194, c:'#E53935', url:'https://www.google.com/maps/search/?api=1&query=Garosugil+Sinsa+Gangnam+Seoul' },
+    { name:'VIC Lab Color Analysis 🎨 (Booked)', lat:37.5585, lng:126.9209, c:'#C62828', url:'https://www.google.com/maps/search/?api=1&query=15+World+Cup+buk-ro+4-gil' },
+    { name:'Mangwon Market 🍜', lat:37.5551, lng:126.9046, c:'#43A047', url:'https://www.google.com/maps/search/?api=1&query=Mangwon+Market+Seoul', hours:'9:00 AM – 9:00 PM' },
+    { name:'Tamburins Flagship 🧴',lat:37.5209, lng:127.0221, c:'#00897B', url:'https://www.google.com/maps/search/?api=1&query=Tamburins+flagship+Sinsa+Seoul' },
     { name:'Hair Tattoo Appointment 💇', lat:37.5220, lng:127.0279, c:'#C62828', url:'https://www.google.com/maps/search/?api=1&query=hair+tattoo+salon+Gangnam+Seoul' },
-    { name:'Gebang Sikdang 🦀 (Soy Crab)', lat:37.5180, lng:127.0275, c:'#43A047', url:'https://www.google.com/maps/search/?api=1&query=Gebang+Sikdang+Seoul' },
-    { name:'Sappun Shoes 👟', lat:37.5180, lng:127.0200, c:'#EC407A', url:'https://share.google/1W5iNuG4JvJBuEQan' },
+    { name:'Gebang Sikdang 🦀 (Soy Crab)', lat:37.51764326285173, lng:127.03941658573348, c:'#43A047', url:'https://www.google.com/maps/search/?api=1&query=Gebang+Sikdang+Seoul', hours:'11:30–21:00 (break 15:00–17:30)' },
+    { name:'Sappun Shoes 👟', lat:37.5203, lng:127.0225, c:'#EC407A', url:'https://share.google/1W5iNuG4JvJBuEQan' },
+    { name: 'Blue Elephant', lat:37.5252, lng:127.03661, c:'#EC407A', url:'https://maps.app.goo.gl/CrmhGn5exhUnqFXo7'},
+    { name: 'Rockfish Weatherwear Dosan', lat:37.5254, lng:127.0373, c:'#EC407A', url:'https://maps.app.goo.gl/Zw6ppFTFKxw6nPtx8'},
+    { name: 'Osoi', lat:37.5465, lng:127.05104, c:'#EC407A', url: 'https://maps.app.goo.gl/Yr9idjP7AJjC1CnS6'},
+    { name: 'DOUBLE LOVERS SEONGSU FLAGSHIP STORE', lat:37.5437, lng:127.0548, c:'#ec40aa', url: 'https://maps.app.goo.gl/YzPU8Qo1fnScC3Rk7'},
+    { name: 'MARGESHERWOOD Seoul Flagship Store', lat:37.5435, lng:127.0572, c:'#ec40aa', url: 'https://maps.app.goo.gl/M6kusS5gXj8dnZQz6'},
+    { name: 'STAND OIL', lat:37.54398875947829, lng:127.05746441492252, c:'#ec40aa', url: 'https://maps.app.goo.gl/xS5Hjpgqxg6qB4dY8'},
   ];
   window.pageMap = map; window.pageMarkers = [];
   pts.forEach(function(p) {
     var m = L.marker([p.lat, p.lng], { icon: p.hotel ? hotelDot() : dot(p.c) }).addTo(map);
     var html = '<b>' + p.name + '</b>';
+    if (p.hours) html += '<br><span style="font-size:12px">🕐 ' + p.hours + '</span>';
     if (p.url) html += '<br><a href="' + p.url + '" target="_blank" style="font-size:12px">Open in Maps →</a>';
     m.bindPopup(html);
     window.pageMarkers.push({ marker: m, lat: p.lat, lng: p.lng });
   });
+  function routeLabel(n, color) {
+    return L.divIcon({ className:'', html:'<div style="width:18px;height:18px;border-radius:50%;background:'+color+';border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;line-height:1">'+n+'</div>', iconSize:[18,18], iconAnchor:[9,9] });
+  }
+  // Route 1: Shilla Stay → VIC Lab
+  L.polyline([[37.5572,126.9680],[37.5585,126.9209]], { color:'#4A148C', weight:3, dashArray:'6,5', opacity:0.7 }).addTo(map);
+  L.marker([37.5579,126.9445], { icon:routeLabel(1,'#4A148C') }).addTo(map);
+  // Route 2: VIC Lab → Mangwon Market
+  L.polyline([[37.5585,126.9209],[37.5551,126.9046]], { color:'#1565C0', weight:3, dashArray:'6,5', opacity:0.7 }).addTo(map);
+  L.marker([37.5568,126.9128], { icon:routeLabel(2,'#1565C0') }).addTo(map);
+  // Route 3: Mangwon Market → Tamburins Flagship
+  L.polyline([[37.5551,126.9046],[37.5209,127.0221]], { color:'#00897B', weight:3, dashArray:'6,5', opacity:0.7 }).addTo(map);
+  L.marker([37.5375,126.9634], { icon:routeLabel(3,'#00897B') }).addTo(map);
 })();
 </script>
 ```
@@ -72,6 +91,20 @@ title: "Jul 28 — Gangnam Day"
 ```
 
 ```{=html}
+<div class="event-card transit" data-dt="2026-07-28T10:45">
+  <div class="event-time">→</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag note">🚶 Getting There</span></div>
+    <div class="event-name">VIC Lab → Mangwon Market</div>
+    <div class="event-notes">
+      <strong>Option A — Walk</strong> · 1.6 km · ~25 min · enjoy the neighbourhood along the way<br>
+      <strong>Option B — Bus</strong> · ~20 min total · 8 min walk to bus stop → 8 min bus ride → 4 min walk to market
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
 <div class="section-header">Lunch — Mangwon Market</div>
 
 <div class="event-card meal" data-dt="2026-07-28T11:30" data-lat="37.5551" data-lng="126.9046">
@@ -79,7 +112,7 @@ title: "Jul 28 — Gangnam Day"
   <div class="event-body">
     <div class="event-tags"><span class="tag meal">🍜 Lunch</span></div>
     <div class="event-name">Mangwon Market</div>
-    <div class="event-notes">Local covered market with great food stalls. Try:
+    <div class="event-notes"><strong>Hours: 9:00 AM – 9:00 PM</strong><br>Local covered market with great food stalls. Try:
       <ul>
         <li>Dakgomtang — herbal chicken soup stall</li>
         <li>Korean meat balls (고기완자)</li>
@@ -96,31 +129,101 @@ title: "Jul 28 — Gangnam Day"
 ```
 
 ```{=html}
-<div class="section-header">Afternoon — Shopping</div>
-
-<div class="event-card shopping" data-dt="2026-07-28T13:30" data-lat="37.5178" data-lng="127.0194">
-  <div class="event-time">13:30</div>
+<div class="event-card transit" data-dt="2026-07-28T12:30">
+  <div class="event-time">→</div>
   <div class="event-body">
-    <div class="event-tags"><span class="tag shopping">🛍️ Shopping</span></div>
-    <div class="event-name">Garosugil / Sinsa — Boutique Strip</div>
-    <div class="event-notes">Seoul's chicest tree-lined street. Explore:
-      <ul>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Blue+Elephant+Seoul" target="_blank">Blue Elephant</a></li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Tamburins+Garosugil+Seoul" target="_blank">Tamburins</a></li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Margesherwood+Seoul" target="_blank">Margesherwood</a></li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Osoi+Seoul" target="_blank">Osoi</a></li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Stand+Oil+Seoul" target="_blank">Stand Oil</a></li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Rockfish+Seoul" target="_blank">Rockfish</a></li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Double+Lovers+Seoul" target="_blank">Double Lovers</a></li>
-        <li><a href="https://share.google/1W5iNuG4JvJBuEQan" target="_blank">Sappun Shoes</a></li>
-      </ul>
-    </div>
-    <div class="event-links">
-      <a href="https://www.google.com/maps/search/?api=1&query=Garosugil+Sinsa+Seoul" target="_blank" class="maps-link">📍 Garosugil</a>
-      <a href="https://map.naver.com/p/search/가로수길" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+    <div class="event-tags"><span class="tag note">🚇 Getting There · ~1 hr</span></div>
+    <div class="event-name">Mangwon Market → Sinsa (Garosugil)</div>
+    <div class="event-notes">
+      <strong>① Walk</strong> 1.3 km · ~21 min to subway station<br>
+      <strong>② Line 2</strong> <span style="display:inline-block;background:#3AB34A;color:#fff;padding:1px 7px;border-radius:3px;font-size:11px;font-weight:700">Green</span> · ~14 min<br>
+      <strong>③ Transfer at Euljiro 3-ga</strong> → Line 3 <span style="display:inline-block;background:#F7931D;color:#fff;padding:1px 7px;border-radius:3px;font-size:11px;font-weight:700">Orange</span><br>
+      <strong>④ Alight at Sinsa Station</strong>
     </div>
   </div>
 </div>
+```
+
+```{=html}
+<div class="section-header">Afternoon — Shopping</div>
+
+<div class="event-card shopping" data-dt="2026-07-28T13:30">
+  <div class="event-time">First</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag shopping">🛍️ Stop 1 · Near Sinsa Station</span></div>
+    <div class="event-name">Tamburins Flagship · Sappun Garosugil Branch</div>
+    <div class="event-notes">Right off the station — start here before moving west.
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Tamburins+flagship+Sinsa+Seoul" target="_blank">Tamburins flagship store, Sinsa</a></li>
+        <li><a href="https://share.google/1W5iNuG4JvJBuEQan" target="_blank">Sappun Garosugil Branch</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="event-card transit" data-dt="2026-07-28T14:15">
+  <div class="event-time">→</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag note">🚶 Getting There</span></div>
+    <div class="event-name">Sinsa → Rockfish / Blue Elephant area (Dosan)</div>
+    <div class="event-notes">
+      <strong>Option A — Walk</strong> · 1.7 km · ~30 min<br>
+      <strong>Option B — Bus</strong> · ~20 min
+    </div>
+  </div>
+</div>
+
+<div class="event-card shopping" data-dt="2026-07-28T14:30">
+  <div class="event-time">Stop 2</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag shopping">🛍️ Stop 2 · Dosan area</span></div>
+    <div class="event-name">Rockfish Weatherwear · Blue Elephant</div>
+    <div class="event-notes">These two are right next to each other.
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Rockfish+Weatherwear+Dosan+Seoul" target="_blank">Rockfish Weatherwear Dosan</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Blue+Elephant+Dosan+Seoul" target="_blank">Blue Elephant</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="event-card transit" data-dt="2026-07-28T15:15">
+  <div class="event-time">→</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag note">🚇 1 Stop · ~20 min walk after</span></div>
+    <div class="event-name">Dosan → Double Lovers / Stand Oil / MARGESHERWOOD cluster</div>
+    <div class="event-notes">Take 1 subway stop then walk ~20 min. All three stores are clustered very close together.</div>
+  </div>
+</div>
+
+<div class="event-card shopping" data-dt="2026-07-28T15:30">
+  <div class="event-time">Stop 3</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag shopping">🛍️ Stop 3 · Clustered</span></div>
+    <div class="event-name">Double Lovers · Stand Oil · MARGESHERWOOD</div>
+    <div class="event-notes">All within a short walk of each other.
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Double+Lovers+Seoul" target="_blank">Double Lovers</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Stand+Oil+Seoul" target="_blank">Stand Oil</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Margesherwood+Seoul" target="_blank">MARGESHERWOOD</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="event-card shopping" data-dt="2026-07-28T16:00">
+  <div class="event-time">Stop 4</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag shopping">🛍️ Stop 4 · Nearby</span></div>
+    <div class="event-name">Osoi</div>
+    <div class="event-notes">A few blocks from the Stop 3 cluster.
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Osoi+Seoul" target="_blank">Osoi</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 
 <div class="event-card morning" data-dt="2026-07-28T16:30" data-lat="37.5220" data-lng="127.0279">
   <div class="event-time">16:30</div>
@@ -144,7 +247,7 @@ title: "Jul 28 — Gangnam Day"
   <div class="event-body">
     <div class="event-tags"><span class="tag meal">🦀 Dinner</span><span class="tag note">📞 Reservation</span></div>
     <div class="event-name">Gebang Sikdang — Soy Marinated Crab</div>
-    <div class="event-notes">Ganjang gejang (간장 게장) — raw crab marinated in soy sauce. Rich, umami-packed, melt-in-your-mouth. <em>Make reservation in advance.</em></div>
+    <div class="event-notes">🕐 <strong>11:30–21:00</strong> · Break time 15:00–17:30<br>Ganjang gejang (간장 게장) — raw crab marinated in soy sauce. Rich, umami-packed, melt-in-your-mouth. <em>Make reservation in advance.</em></div>
     <div class="event-links">
       <a href="https://www.google.com/maps/search/?api=1&query=Gebang+Sikdang+Seoul" target="_blank" class="maps-link">📍 Gebang Sikdang</a>
       <a href="https://map.naver.com/p/search/게방식당" target="_blank" class="maps-link naver-link">🗺 Naver</a>
