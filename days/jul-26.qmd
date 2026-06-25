@@ -7,6 +7,7 @@ title: "Jul 26 — Departure"
   <div class="day-badge">Sunday · July 26, 2026 · Day 1 of 15</div>
   <h1 class="day-title">Departure ✈️</h1>
   <div class="day-subtitle">📍 Vancouver International Airport (YVR) → Incheon (ICN)</div>
+  <div class="finalized-badge">✅ Finalized</div>
 </div>
 ```
 

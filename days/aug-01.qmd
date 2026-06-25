@@ -7,6 +7,7 @@ title: "Aug 1 — East Jeju"
   <div class="day-badge">Saturday · August 1, 2026 · Day 7 of 15</div>
   <h1 class="day-title">East Jeju 🌅</h1>
   <div class="day-subtitle">📍 Seongsan · Haenyeo Show · Gwangchigi Beach · Umu & Gamttanam · Jeju</div>
+  <div class="pending-badge">🔧 Needs Fixes</div>
 </div>
 ```
 
@@ -25,14 +26,14 @@ title: "Aug 1 — East Jeju"
     return L.divIcon({ className:'', html:'<div style="width:22px;height:22px;border-radius:50%;background:#4A148C;border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1;color:#fff">★</div>', iconSize:[22,22], iconAnchor:[11,11], popupAnchor:[0,-13] });
   }
   var pts = [
-    { name:'🏨 Grabel Hotel Jeju', lat:33.4996, lng:126.5312, hotel:true, url:'https://www.google.com/maps/search/?api=1&query=Grabel+Hotel+Jeju' },
+    { name:'🏨 Shilla Stay Jeju Airport', lat:33.48580289503151, lng:126.49091012883574, hotel:true, url:'https://www.google.com/maps/search/?api=1&query=Shilla+Stay+Jeju+Airport' },
     { name:'Seongsan Ilchulbong (Sunrise Peak) 🌅', lat:33.4583, lng:126.9422, c:'#C62828', url:'https://www.google.com/maps/search/?api=1&query=Seongsan+Ilchulbong+Jeju' },
-    { name:'Haenyeo Diver Show 🤿', lat:33.4400, lng:126.8960, c:'#1565C0', url:'https://www.google.com/maps/search/?api=1&query=Haenyeo+performance+Jeju' },
-    { name:'Nolaba Ramen 🍜', lat:33.4420, lng:126.8980, c:'#43A047', url:'https://share.google/vkGB0uDzdGcLkohS7' },
+    { name:'Haenyeo Diver Show 🤿', lat:33.464604859978465, lng:126.93627516215088, c:'#1565C0', url:'https://maps.app.goo.gl/Rnbz4s2sdFUvYDZG6' },
+    { name:'Nolaba Ramen 🍜', lat:33.48284914231799, lng:126.37621955092507, c:'#43A047', url:'https://maps.app.goo.gl/USjTj739GHcDPqaZ9' },
     { name:'Gwangchigi Beach 🏖️', lat:33.4650, lng:126.9200, c:'#1976D2', url:'https://www.google.com/maps/search/?api=1&query=Gwangchigi+Beach+Jeju' },
-    { name:'Umu Cafe ☕', lat:33.4640, lng:126.9210, c:'#AB47BC', url:'https://www.google.com/maps/search/?api=1&query=Umu+cafe+Seongsan+Jeju' },
-    { name:'Gamttanam (Orange Cafe) 🍊', lat:33.4620, lng:126.9190, c:'#FFA726', url:'https://share.google/vkGB0uDzdGcLkohS7' },
-    { name:'Black Pork BBQ 🐷', lat:33.4996, lng:126.5312, c:'#C62828', url:'https://www.google.com/maps/search/?api=1&query=black+pork+BBQ+Jeju' },
+    { name:'Umu Cafe ☕', lat:33.4059540478567, lng:126.25654873629324, c:'#AB47BC', url:'https://maps.app.goo.gl/9rWsErEPUwd7wSPu9' },
+    { name:'Gamttanam (Orange Cafe) 🍊', lat:33.26235649570158, lng:126.49473094088607, c:'#FFA726', url:'https://maps.app.goo.gl/gwT68uXbakAW2xT88' },
+    { name:'Jung Jong Jeju Black Pork BBQ 🐷', lat:33.49112408965034, lng:126.50181770217206, c:'#C62828', url:'https://maps.app.goo.gl/Wo5RRJGezrjXzfdP9' },
   ];
   window.pageMap = map; window.pageMarkers = [];
   pts.forEach(function(p) {
@@ -49,17 +50,28 @@ title: "Aug 1 — East Jeju"
 ```{=html}
 <div class="section-header">Early Morning — Sunrise Hike</div>
 
-<div class="event-card morning" data-dt="2026-08-01T05:30" data-lat="33.4583" data-lng="126.9422">
-  <div class="event-time">05:30</div>
+<div class="event-card morning" data-dt="2026-08-01T04:00" data-lat="33.48580289503151" data-lng="126.49091012883574">
+  <div class="event-time">04:00</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag note">⏰ Wake Up</span></div>
+    <div class="event-name">Wake Up & Depart Shilla Stay Jeju Airport</div>
+    <div class="event-notes">🚗 <strong>~55 min drive</strong> to Seongsan Ilchulbong. Depart by <strong>04:10</strong> to arrive at 05:10–05:20 — leaving enough time to park, buy tickets, and hike up before sunrise.</div>
+  </div>
+</div>
+
+<div class="event-card morning" data-dt="2026-08-01T05:15" data-lat="33.4583" data-lng="126.9422">
+  <div class="event-time">05:15</div>
   <div class="event-body">
     <div class="event-tags"><span class="tag activity">🌅 Sunrise</span></div>
     <div class="event-name">Hike Seongsan Ilchulbong (Sunrise Peak)</div>
-    <div class="event-notes">UNESCO World Heritage volcanic crater rising from the sea. The sunrise from the summit is one of Korea's most iconic sights. Trail is 20–30 min up, can be steep. Arrive before dawn to get a good spot. Entry: ₩2,000.
+    <div class="event-notes">UNESCO World Heritage volcanic crater rising from the sea. The sunrise from the summit is one of Korea's most iconic sights.<br><br>
+      <strong>🕔 Timeline:</strong>
       <ul>
-        <li>Gate opens at 05:00 in summer</li>
-        <li>Bring a jacket — windy at the top</li>
-        <li>Headlamp helpful in pre-dawn dark</li>
+        <li><strong>05:10–05:20</strong> — Arrive, park, buy tickets (₩2,000)</li>
+        <li><strong>05:20–05:40</strong> — Hike up (20–30 min, can be steep)</li>
+        <li><strong>05:40–06:00</strong> — Sunrise at the summit 🌅</li>
       </ul>
+      Gate opens at 05:00 in summer. Bring a jacket — windy at the top. Headlamp helpful in pre-dawn dark.
     </div>
     <div class="event-links">
       <a href="https://www.google.com/maps/search/?api=1&query=Seongsan+Ilchulbong+Jeju" target="_blank" class="maps-link">📍 Seongsan Peak</a>
@@ -72,27 +84,30 @@ title: "Aug 1 — East Jeju"
 ```{=html}
 <div class="section-header">Midday</div>
 
-<div class="event-card meal" data-dt="2026-08-01T12:00" data-lat="33.4420" data-lng="126.8980">
+<div class="event-card meal" data-dt="2026-08-01T12:00" data-lat="33.48284914231799" data-lng="126.37621955092507">
   <div class="event-time">12:00</div>
   <div class="event-body">
     <div class="event-tags"><span class="tag meal">🍜 Lunch</span></div>
     <div class="event-name">Nolaba Ramen</div>
     <div class="event-notes">Popular ramen spot near the Seongsan area. Great post-hike warm-up meal.</div>
     <div class="event-links">
-      <a href="https://share.google/vkGB0uDzdGcLkohS7" target="_blank" class="maps-link">📍 Google Maps</a>
+      <a href="https://maps.app.goo.gl/USjTj739GHcDPqaZ9" target="_blank" class="maps-link">📍 Google Maps</a>
       <a href="https://map.naver.com/p/search/놀아바+라멘+제주" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
 
-<div class="event-card activity" data-dt="2026-08-01T13:30" data-lat="33.4400" data-lng="126.8960">
+<div class="event-card activity" data-dt="2026-08-01T13:30" data-lat="33.464604859978465" data-lng="126.93627516215088">
   <div class="event-time">13:30</div>
   <div class="event-body">
     <div class="event-tags"><span class="tag activity">🤿 Show</span></div>
     <div class="event-name">Haenyeo Diver Show</div>
-    <div class="event-notes">Watch Jeju's legendary female free-divers (해녀) demonstrate their tradition of diving without equipment to harvest abalone, sea urchin, and seaweed. A living piece of UNESCO Intangible Heritage.</div>
+    <div class="event-notes">Watch Jeju's legendary female free-divers (해녀) demonstrate their tradition of diving without equipment to harvest abalone, sea urchin, and seaweed. A living piece of UNESCO Intangible Heritage.<br><br>
+      🕑 <strong>Show starts at 2:00 PM daily — closed Mondays.</strong><br>
+      ⚠️ Arrive early to secure a good viewing spot as it fills up quickly.
+    </div>
     <div class="event-links">
-      <a href="https://www.google.com/maps/search/?api=1&query=Haenyeo+performance+Jeju" target="_blank" class="maps-link">📍 Haenyeo Show</a>
+      <a href="https://maps.app.goo.gl/Rnbz4s2sdFUvYDZG6" target="_blank" class="maps-link">📍 Google Maps</a>
       <a href="https://map.naver.com/p/search/해녀공연+제주" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
@@ -115,27 +130,27 @@ title: "Aug 1 — East Jeju"
   </div>
 </div>
 
-<div class="event-card afternoon" data-dt="2026-08-01T16:30" data-lat="33.4640" data-lng="126.9210">
+<div class="event-card afternoon" data-dt="2026-08-01T16:30" data-lat="33.4059540478567" data-lng="126.25654873629324">
   <div class="event-time">16:30</div>
   <div class="event-body">
     <div class="event-tags"><span class="tag meal">☕ Cafe</span></div>
     <div class="event-name">Umu Cafe</div>
     <div class="event-notes">Scenic cafe near Seongsan with ocean views. Great for afternoon coffee and views back to the volcanic peak.</div>
     <div class="event-links">
-      <a href="https://www.google.com/maps/search/?api=1&query=Umu+cafe+Seongsan+Jeju" target="_blank" class="maps-link">📍 Umu</a>
+      <a href="https://maps.app.goo.gl/9rWsErEPUwd7wSPu9" target="_blank" class="maps-link">📍 Umu</a>
       <a href="https://map.naver.com/p/search/우무+카페+성산" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
 
-<div class="event-card afternoon" data-dt="2026-08-01T17:00" data-lat="33.4620" data-lng="126.9190">
+<div class="event-card afternoon" data-dt="2026-08-01T17:00" data-lat="33.26235649570158" data-lng="126.49473094088607">
   <div class="event-time">17:00</div>
   <div class="event-body">
     <div class="event-tags"><span class="tag meal">🍊 Cafe</span></div>
     <div class="event-name">Gamttanam — Orange Cafe</div>
     <div class="event-notes">Famous orange/tangerine themed cafe in Jeju. The island is famous for hallabong citrus, and this cafe uses them in drinks and desserts.</div>
     <div class="event-links">
-      <a href="https://share.google/vkGB0uDzdGcLkohS7" target="_blank" class="maps-link">📍 Google Maps</a>
+      <a href="https://maps.app.goo.gl/gwT68uXbakAW2xT88" target="_blank" class="maps-link">📍 Google Maps</a>
       <a href="https://map.naver.com/p/search/감태나무+제주" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
@@ -145,20 +160,20 @@ title: "Aug 1 — East Jeju"
 ```{=html}
 <div class="section-header">Dinner</div>
 
-<div class="event-card meal" data-dt="2026-08-01T19:30" data-lat="33.4996" data-lng="126.5312">
+<div class="event-card meal" data-dt="2026-08-01T19:30" data-lat="33.49112408965034" data-lng="126.50181770217206">
   <div class="event-time">19:30</div>
   <div class="event-body">
-    <div class="event-tags"><span class="tag meal">🐷 Dinner</span><span class="tag tbd">Find it</span></div>
-    <div class="event-name">Jeju Black Pork BBQ (흑돼지)</div>
-    <div class="event-notes">Jeju's signature dish — black Berkshire pigs raised on the island, with distinctly richer flavour. Best enjoyed as thick slices of pork belly (samgyeopsal) grilled over charcoal. Research a spot near your area for the evening.</div>
+    <div class="event-tags"><span class="tag meal">🐷 Dinner</span></div>
+    <div class="event-name">Jung Jong Jeju Black Pork BBQ (흑돼지)</div>
+    <div class="event-notes">Jeju's signature dish — black Berkshire pigs raised on the island, with distinctly richer flavour. Best enjoyed as thick slices of pork belly (samgyeopsal) grilled over charcoal.</div>
     <div class="event-links">
-      <a href="https://www.google.com/maps/search/?api=1&query=Jeju+black+pork+BBQ+흑돼지" target="_blank" class="maps-link">📍 Search Black Pork</a>
-      <a href="https://map.naver.com/p/search/제주흑돼지+BBQ" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+      <a href="https://maps.app.goo.gl/Wo5RRJGezrjXzfdP9" target="_blank" class="maps-link">📍 Google Maps</a>
+      <a href="https://map.naver.com/p/search/중정제주흑돼지" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
 ```
 
 ```{=html}
-<div class="note-box"><strong>Set alarms early</strong> — 05:00 wake-up for sunrise. Drive from Jeju City to Seongsan is ~45 min. Cafes and restaurants near Seongsan open from ~08:00.</div>
+<div class="note-box"><strong>Set alarm for 04:00</strong> — depart by 04:10 for the ~55 min drive to Seongsan. Aim to arrive 05:10–05:20, hike up in 20–30 min, and catch sunrise at 05:40–06:00. Cafes and restaurants near Seongsan open from ~08:00.</div>
 ```

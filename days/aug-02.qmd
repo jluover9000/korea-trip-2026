@@ -7,6 +7,7 @@ title: "Aug 2 — Nature Day"
   <div class="day-badge">Sunday · August 2, 2026 · Day 8 of 15</div>
   <h1 class="day-title">Nature Day 🌿</h1>
   <div class="day-subtitle">📍 Manjanggul Cave · Sangumburi Crater · Eco Land · Haenyeo Gimbap · Gyulbate Cafe · Jeju</div>
+  <div class="pending-badge">🔧 Needs Fixes</div>
 </div>
 ```
 
@@ -25,13 +26,15 @@ title: "Aug 2 — Nature Day"
     return L.divIcon({ className:'', html:'<div style="width:22px;height:22px;border-radius:50%;background:#4A148C;border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1;color:#fff">★</div>', iconSize:[22,22], iconAnchor:[11,11], popupAnchor:[0,-13] });
   }
   var pts = [
-    { name:'🏨 Grabel Hotel Jeju', lat:33.4996, lng:126.5312, hotel:true, url:'https://www.google.com/maps/search/?api=1&query=Grabel+Hotel+Jeju' },
+    { name:'🏨 Shilla Stay Jeju Airport', lat:33.48580289503151, lng:126.49091012883574, hotel:true, url:'https://www.google.com/maps/search/?api=1&query=Shilla+Stay+Jeju+Airport' },
     { name:'Manjanggul Cave 🕍', lat:33.5280, lng:126.7718, c:'#5C6BC0', url:'https://www.google.com/maps/search/?api=1&query=Manjanggul+Lava+Tube+Cave+Jeju' },
-    { name:'Sambo Restaurant 🐟 (Okdommu guk)', lat:33.5100, lng:126.7700, c:'#43A047', url:'https://share.google/tjqZSWK3uK3IXScDs' },
-    { name:'Sangumburi Crater 🌿', lat:33.4493, lng:126.8196, c:'#2E7D32', url:'https://www.google.com/maps/search/?api=1&query=Sangumburi+Crater+Jeju' },
-    { name:'Eco Land Theme Park 🌳', lat:33.4500, lng:126.8210, c:'#66BB6A', url:'https://www.google.com/maps/search/?api=1&query=Eco+Land+Theme+Park+Jeju' },
-    { name:'Haenyeogimbap 🍱 (Gimbap by the sea)', lat:33.4400, lng:126.8960, c:'#FFA726', url:'https://share.google/Z42EE57KdOj3QE1oQ' },
-    { name:'Gyulbate Cafe 🍊', lat:33.4550, lng:126.7900, c:'#AB47BC', url:'https://share.google/T7L5NKhJmMnZzilgk' },
+    { name:'통일가든 🍜 (Cold Black Bean Noodles)', lat:33.534361533250895, lng:126.635465740889, c:'#FFA726', url:'https://maps.app.goo.gl/gpRGRfnsbDUNPkGi7' },
+    { name:'Sambo Restaurant 🐟 (Okdommu guk)', lat:33.24785059532611, lng:126.55917292228439, c:'#43A047', url:'https://share.google/tjqZSWK3uK3IXScDs' },
+    { name:'Jeju Stone Park 🗿', lat:33.449446919743444, lng:126.65897809190028, c:'#795548', url:'https://www.google.com/maps/search/?api=1&query=Jeju+Stone+Park' },
+    { name:'Eco Land Theme Park 🌳', lat:33.44753499655823, lng:126.667351143356, c:'#66BB6A', url:'https://www.google.com/maps/search/?api=1&query=Eco+Land+Theme+Park+Jeju' },
+    { name:'Sangumburi Crater 🌿', lat:33.433231454404556, lng:126.6905560760605, c:'#2E7D32', url:'https://www.google.com/maps/search/?api=1&query=Sangumburi+Crater+Jeju' },
+    { name:'Haenyeogimbap 🍱 (Gimbap by the sea)', lat:33.54253160461269, lng:126.6712426355821, c:'#FFA726', url:'https://share.google/Z42EE57KdOj3QE1oQ' },
+    { name:'Gyulbate Cafe 🍊', lat:33.28189285940979, lng:126.6298635374323, c:'#AB47BC', url:'https://share.google/T7L5NKhJmMnZzilgk' },
   ];
   window.pageMap = map; window.pageMarkers = [];
   pts.forEach(function(p) {
@@ -71,15 +74,15 @@ title: "Aug 2 — Nature Day"
 ```{=html}
 <div class="section-header">Lunch</div>
 
-<div class="event-card meal" data-dt="2026-08-02T12:00" data-lat="33.5100" data-lng="126.7700">
+<div class="event-card meal" data-dt="2026-08-02T12:00" data-lat="33.534361533250895" data-lng="126.635465740889">
   <div class="event-time">12:00</div>
   <div class="event-body">
-    <div class="event-tags"><span class="tag meal">🐟 Lunch</span></div>
-    <div class="event-name">Sambo Restaurant — Okdommu Guk (옥돔무국)</div>
-    <div class="event-notes">Okdom (red tilefish) radish soup — a classic Jeju dish. Light, clean broth with the signature locally-caught fish. A taste you won't find as well anywhere else.</div>
+    <div class="event-tags"><span class="tag meal">🍜 Lunch</span></div>
+    <div class="event-name">통일가든 — Cold Black Bean Noodles</div>
+    <div class="event-notes">Cold black bean noodles (물냉면/짜장) — a refreshing and hearty lunch stop.</div>
     <div class="event-links">
-      <a href="https://share.google/tjqZSWK3uK3IXScDs" target="_blank" class="maps-link">📍 Google Maps</a>
-      <a href="https://map.naver.com/p/search/삼보식당+제주+옥돔무국" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+      <a href="https://maps.app.goo.gl/gpRGRfnsbDUNPkGi7" target="_blank" class="maps-link">📍 Google Maps</a>
+      <a href="https://map.naver.com/p/search/통일가든+제주" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
@@ -88,21 +91,21 @@ title: "Aug 2 — Nature Day"
 ```{=html}
 <div class="section-header">Afternoon — Crater & Park</div>
 
-<div class="event-card afternoon" data-dt="2026-08-02T14:30" data-lat="33.4493" data-lng="126.8196">
-  <div class="event-time">14:30</div>
+<div class="event-card afternoon" data-dt="2026-08-02T14:00" data-lat="33.449446919743444" data-lng="126.65897809190028">
+  <div class="event-time">14:00</div>
   <div class="event-body">
-    <div class="event-tags"><span class="tag activity">🌿 Nature</span></div>
-    <div class="event-name">Sangumburi Crater</div>
-    <div class="event-notes">A perfectly circular volcanic crater filled with 420+ plant species. Stunning panoramic walk around the rim. Entry: ~₩3,000. About 30 min loop walk.</div>
+    <div class="event-tags"><span class="tag activity">🗿 Nature</span></div>
+    <div class="event-name">Jeju Stone Park (돌문화공원)</div>
+    <div class="event-notes">Vast outdoor park celebrating Jeju's volcanic stone culture and mythology. Features hundreds of stone statues (dol hareubang), lava rock formations, and traditional thatched homes set across a sweeping landscape.</div>
     <div class="event-links">
-      <a href="https://www.google.com/maps/search/?api=1&query=Sangumburi+Crater+Jeju" target="_blank" class="maps-link">📍 Sangumburi</a>
-      <a href="https://map.naver.com/p/search/산굼부리" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Jeju+Stone+Park" target="_blank" class="maps-link">📍 Jeju Stone Park</a>
+      <a href="https://map.naver.com/p/search/제주돌문화공원" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
 
-<div class="event-card afternoon" data-dt="2026-08-02T15:30" data-lat="33.4500" data-lng="126.8210">
-  <div class="event-time">15:30</div>
+<div class="event-card afternoon" data-dt="2026-08-02T15:00" data-lat="33.44753499655823" data-lng="126.667351143356">
+  <div class="event-time">15:00</div>
   <div class="event-body">
     <div class="event-tags"><span class="tag activity">🌳 Park</span></div>
     <div class="event-name">Eco Land Theme Park</div>
@@ -113,12 +116,25 @@ title: "Aug 2 — Nature Day"
     </div>
   </div>
 </div>
+
+<div class="event-card afternoon" data-dt="2026-08-02T16:00" data-lat="33.433231454404556" data-lng="126.6905560760605">
+  <div class="event-time">16:00</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag activity">🌿 Nature</span></div>
+    <div class="event-name">Sangumburi Crater</div>
+    <div class="event-notes">A perfectly circular volcanic crater filled with 420+ plant species. Stunning panoramic walk around the rim. Entry: ~₩3,000. About 30 min loop walk.</div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=Sangumburi+Crater+Jeju" target="_blank" class="maps-link">📍 Sangumburi</a>
+      <a href="https://map.naver.com/p/search/산굼부리" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+    </div>
+  </div>
+</div>
 ```
 
 ```{=html}
 <div class="section-header">Snack</div>
 
-<div class="event-card afternoon" data-dt="2026-08-02T17:00" data-lat="33.4400" data-lng="126.8960">
+<div class="event-card afternoon" data-dt="2026-08-02T17:00" data-lat="33.54253160461269" data-lng="126.6712426355821">
   <div class="event-time">17:00</div>
   <div class="event-body">
     <div class="event-tags"><span class="tag meal">🍱 Snack</span></div>
@@ -131,7 +147,7 @@ title: "Aug 2 — Nature Day"
   </div>
 </div>
 
-<div class="event-card afternoon" data-dt="2026-08-02T17:30" data-lat="33.4550" data-lng="126.7900">
+<div class="event-card afternoon" data-dt="2026-08-02T17:30" data-lat="33.28189285940979" data-lng="126.6298635374323">
   <div class="event-time">17:30</div>
   <div class="event-body">
     <div class="event-tags"><span class="tag meal">🍊 Cafe</span></div>
@@ -148,15 +164,15 @@ title: "Aug 2 — Nature Day"
 ```{=html}
 <div class="section-header">Dinner</div>
 
-<div class="event-card meal" data-dt="2026-08-02T19:30" data-lat="33.4996" data-lng="126.5312">
+<div class="event-card meal" data-dt="2026-08-02T19:30" data-lat="33.24785059532611" data-lng="126.55917292228439">
   <div class="event-time">19:30</div>
   <div class="event-body">
-    <div class="event-tags"><span class="tag tbd">TBD</span><span class="tag meal">🍽️ Dinner</span></div>
-    <div class="event-name">Dinner — To Be Decided</div>
-    <div class="event-notes">Explore local options near the hotel or try another Jeju specialty: haemul pajeon (seafood pancake), galchi jorim (braised hairtail fish), or more black pork.</div>
+    <div class="event-tags"><span class="tag meal">🐟 Dinner</span></div>
+    <div class="event-name">Sambo Restaurant — Okdommu Guk (옥돔무국)</div>
+    <div class="event-notes">Okdom (red tilefish) radish soup — a classic Jeju dish. Light, clean broth with the signature locally-caught fish. A taste you won't find as well anywhere else.</div>
     <div class="event-links">
-      <a href="https://www.google.com/maps/search/?api=1&query=Jeju+traditional+restaurants" target="_blank" class="maps-link">📍 Find Restaurants</a>
-      <a href="https://map.naver.com/p/search/제주+맛집" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+      <a href="https://share.google/tjqZSWK3uK3IXScDs" target="_blank" class="maps-link">📍 Google Maps</a>
+      <a href="https://map.naver.com/p/search/삼보식당+제주+옥돔무국" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>

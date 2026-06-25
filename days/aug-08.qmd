@@ -6,7 +6,8 @@ title: "Aug 8 — Final Seoul Day"
 <div class="day-hero">
   <div class="day-badge">Saturday · August 8, 2026 · Day 14 of 15</div>
   <h1 class="day-title">Final Seoul Day 🛍️</h1>
-  <div class="day-subtitle">📍 COEX · K-pop Pilgimage · 논현삼계탕 · Last Shopping · 설매네 · Lotte Tower Night · Seoul</div>
+  <div class="day-subtitle">📍 Head Spa · Han River Bikes · COEX · K-pop · 논현삼계탕 · SeoulMong · Lotte Tower · Seoul</div>
+  <div class="pending-badge">🔧 Needs Fixes</div>
 </div>
 ```
 
@@ -25,14 +26,17 @@ title: "Aug 8 — Final Seoul Day"
     return L.divIcon({ className:'', html:'<div style="width:22px;height:22px;border-radius:50%;background:#4A148C;border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1;color:#fff">★</div>', iconSize:[22,22], iconAnchor:[11,11], popupAnchor:[0,-13] });
   }
   var pts = [
-    { name:'🏨 Shilla Stay Seodaemun Seoul Station', lat:37.5572, lng:126.9680, hotel:true, url:'https://www.google.com/maps/search/?api=1&query=Shilla+Stay+Seodaemun+Seoul+Station' },
+    { name:'🏨 Hotel — Voco Myeongdong or Gangnam (TBD)', lat:37.5572, lng:126.9680, hotel:true, url:'https://www.google.com/maps/search/?api=1&query=Voco+Myeongdong+Seoul' },
+    { name:'EcoJardin Head Spa 💆 (Aeogae)', lat:37.5572, lng:126.9476, c:'#26A69A', url:'https://www.google.com/maps/search/?api=1&query=EcoJardin+head+spa+Aeogae+Seoul' },
+    { name:'Han River Biking 🚲', lat:37.5263, lng:126.9348, c:'#1565C0', url:'https://www.google.com/maps/search/?api=1&query=Han+River+bike+rental+Seoul' },
     { name:'COEX & Starfield Library 📚', lat:37.5126, lng:127.0594, c:'#1565C0', url:'https://www.google.com/maps/search/?api=1&query=COEX+Starfield+Library+Seoul' },
     { name:'HYBE Headquarters 🎵', lat:37.5073, lng:127.0391, c:'#C62828', url:'https://www.google.com/maps/search/?api=1&query=HYBE+Headquarters+Seoul' },
     { name:'SM Entertainment 🎤', lat:37.5178, lng:127.0429, c:'#E53935', url:'https://www.google.com/maps/search/?api=1&query=SM+Entertainment+Seoul' },
     { name:'JYP Entertainment 🎵', lat:37.5193, lng:127.0282, c:'#FFA726', url:'https://www.google.com/maps/search/?api=1&query=JYP+Entertainment+Seoul' },
     { name:'YG Entertainment 🎵', lat:37.5795, lng:126.9460, c:'#212121', url:'https://www.google.com/maps/search/?api=1&query=YG+Entertainment+Seoul' },
     { name:'논현삼계탕 🍗 (Lunch)', lat:37.5161, lng:127.0299, c:'#43A047', url:'https://www.google.com/maps/search/?api=1&query=논현삼계탕+Nonhyeon+Seoul' },
-    { name:'설매네 🍽️ (Final Dinner)', lat:37.5636, lng:126.9834, c:'#C62828', url:'https://www.google.com/maps/search/?api=1&query=설매네+Seoul' },
+    { name:'KimbuksoonKeunNambijip 🍲 (Lunch Alt)', lat:37.5200, lng:127.0300, c:'#66BB6A', url:'https://share.google/bsbvExAPWRr1jouiu' },
+    { name:'SeoulMong 🍱 (Final Dinner)', lat:37.5600, lng:126.9850, c:'#C62828', url:'https://share.google/SnMuyIDAcAsxLyQCl' },
     { name:'Lotte World Tower 🌃', lat:37.5126, lng:127.1021, c:'#8B0000', url:'https://www.google.com/maps/search/?api=1&query=Lotte+World+Tower+Seoul+Sky' },
   ];
   window.pageMap = map; window.pageMarkers = [];
@@ -48,36 +52,71 @@ title: "Aug 8 — Final Seoul Day"
 ```
 
 ```{=html}
-<div class="section-header">Breakfast — Shilla Stay Seodaemun</div>
+<div class="section-header">Breakfast — Hotel</div>
 
 <div class="event-card morning" data-dt="2026-08-08T07:00" data-lat="37.5572" data-lng="126.9680">
   <div class="event-time">07:00–10:30</div>
   <div class="event-body">
-    <div class="event-tags"><span class="tag booked">INCLUDED ✓</span><span class="tag meal">🍳 Breakfast Buffet</span></div>
-    <div class="event-name">CAFE B1F — Breakfast Buffet · Weekend Hours</div>
-    <div class="event-notes">Full breakfast buffet included. Located on the <strong>B1F</strong>.
-      <table style="margin-top:8px;border-collapse:collapse;width:100%;font-size:13px">
-        <tr style="background:#f5f5f5"><th style="padding:4px 8px;text-align:left">Day</th><th style="padding:4px 8px;text-align:right">Hours</th><th style="padding:4px 8px;text-align:right">Adult</th><th style="padding:4px 8px;text-align:right">Child</th></tr>
-        <tr><td style="padding:4px 8px">Weekend</td><td style="padding:4px 8px;text-align:right">07:00–10:30</td><td style="padding:4px 8px;text-align:right">₩23,000</td><td style="padding:4px 8px;text-align:right">₩15,000</td></tr>
-      </table>
-      <ul style="margin-top:8px">
-        <li>Breakfast included in your booking — no extra charge</li>
-        <li>Kitchen closes strictly at 10:30 — don't sleep in too late</li>
-      </ul>
-    </div>
+    <div class="event-tags"><span class="tag booked">INCLUDED ✓</span><span class="tag meal">🍳 Breakfast</span></div>
+    <div class="event-name">Breakfast — Hotel (Weekend Hours)</div>
+    <div class="event-notes">Breakfast included. Check hotel breakfast hours — kitchen typically closes at 10:00–10:30 on weekends. Don't sleep past closing time on the last full day!</div>
     <div class="event-links">
-      <a href="https://www.google.com/maps/search/?api=1&query=Shilla+Stay+Seodaemun+Seoul+Station" target="_blank" class="maps-link">📍 Shilla Stay</a>
-      <a href="https://map.naver.com/p/search/쉐라톤스테이서울역" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Voco+Myeongdong+Seoul" target="_blank" class="maps-link">📍 Hotel</a>
     </div>
   </div>
 </div>
 ```
 
 ```{=html}
-<div class="section-header">Morning — COEX</div>
+<div class="section-header">Morning — Head Spa</div>
 
-<div class="event-card morning" data-dt="2026-08-08T10:00" data-lat="37.5126" data-lng="127.0594">
-  <div class="event-time">10:00</div>
+<div class="event-card morning" data-dt="2026-08-08T09:00" data-lat="37.5572" data-lng="126.9476">
+  <div class="event-time">09:00</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag activity">💆 Head Spa</span></div>
+    <div class="event-name">EcoJardin — Head Spa (Aeogae Branch)</div>
+    <div class="event-notes">Korean head spa experience — scalp treatment, deep cleanse, and relaxing head massage. A luxurious way to start the final Seoul day. <strong>Book in advance</strong> — these spots fill up fast, especially on weekends.
+      <ul>
+        <li>Bring a change top if you want — they use a lot of product</li>
+        <li>Usually 60–90 min sessions</li>
+      </ul>
+    </div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=EcoJardin+head+spa+Aeogae+Seoul" target="_blank" class="maps-link">📍 EcoJardin Aeogae</a>
+      <a href="https://map.naver.com/p/search/에코자딘+애오개+두피케어" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="section-header">Morning — Han River Biking</div>
+
+<div class="event-card morning" data-dt="2026-08-08T11:00" data-lat="37.5263" data-lng="126.9348">
+  <div class="event-time">11:00</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag activity">🚲 Biking</span></div>
+    <div class="event-name">Han River Biking</div>
+    <div class="event-notes">Rent bikes and cruise the Han River bike path — one of Seoul's most classic activities. Flat, scenic paths along both banks with city skyline views. Rental stations available along the riverside parks.
+      <ul>
+        <li>Yeouido Hangang Park has the most convenient rental stations</li>
+        <li>Bike rentals are very affordable — ₩3,000–5,000/hour</li>
+        <li>Path connects to Banpo, Mapodaegyo, and beyond</li>
+      </ul>
+    </div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=Han+River+bike+rental+Yeouido+Seoul" target="_blank" class="maps-link">📍 Han River Bikes</a>
+      <a href="https://map.naver.com/p/search/한강+자전거+대여" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="section-header">COEX & Starfield Library</div>
+
+<div class="event-card morning" data-dt="2026-08-08T12:30" data-lat="37.5126" data-lng="127.0594">
+  <div class="event-time">12:30</div>
   <div class="event-body">
     <div class="event-tags"><span class="tag activity">📚 Library</span></div>
     <div class="event-name">COEX Starfield Library</div>
@@ -94,7 +133,7 @@ title: "Aug 8 — Final Seoul Day"
 <div class="section-header">K-pop Pilgrimage</div>
 
 <div class="event-card morning" data-dt="2026-08-08T11:00" data-lat="37.5073" data-lng="127.0391">
-  <div class="event-time">11:00</div>
+  <div class="event-time">After COEX</div>
   <div class="event-body">
     <div class="event-tags"><span class="tag activity">🎵 K-pop</span></div>
     <div class="event-name">K-pop Company Buildings</div>
@@ -104,7 +143,7 @@ title: "Aug 8 — Final Seoul Day"
         <li><a href="https://www.google.com/maps/search/?api=1&query=SM+Entertainment+Seolleung+Seoul" target="_blank"><strong>SM Entertainment</strong></a> (EXO, aespa, SHINee) — Seolleung</li>
         <li><a href="https://www.google.com/maps/search/?api=1&query=JYP+Entertainment+Seoul" target="_blank"><strong>JYP</strong></a> (TWICE, Stray Kids, NMIXX) — Cheongdam</li>
         <li><a href="https://www.google.com/maps/search/?api=1&query=YG+Entertainment+Seoul" target="_blank"><strong>YG</strong></a> (BLACKPINK, BIGBANG) — Hapjeong</li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Starship+Entertainment+Seoul" target="_blank"><strong>Starship</strong></a> (MONSTA X, CRAVITY)</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Starship+Entertainment+Seoul" target="_blank"><strong>Starship</strong></a> (MONSTA X, CRAVITY, IVE)</li>
       </ul>
       Most are just the buildings — no tours usually. Some have fan café areas nearby.
     </div>
@@ -122,12 +161,25 @@ title: "Aug 8 — Final Seoul Day"
 <div class="event-card meal" data-dt="2026-08-08T13:00" data-lat="37.5161" data-lng="127.0299">
   <div class="event-time">13:00</div>
   <div class="event-body">
-    <div class="event-tags"><span class="tag meal">🍗 Lunch</span></div>
-    <div class="event-name">논현삼계탕 본점 — Samgyetang</div>
-    <div class="event-notes">Famous samgyetang (ginseng chicken soup) restaurant in Nonhyeon. Whole young chicken stuffed with rice, ginseng, jujube, and garlic in a nourishing broth. A classic Korean restorative meal — great before a big final shopping day.</div>
+    <div class="event-tags"><span class="tag meal">🍗 Lunch Option 1</span></div>
+    <div class="event-name">논현삼계탕 본점 — Samgyetang (Ginseng Chicken)</div>
+    <div class="event-notes">Famous samgyetang (ginseng chicken soup) restaurant in Nonhyeon. Whole young chicken stuffed with rice, ginseng, jujube, and garlic in a nourishing broth. A classic Korean restorative meal — great energy before the final evening out.</div>
     <div class="event-links">
       <a href="https://www.google.com/maps/search/?api=1&query=논현삼계탕+본점+Nonhyeon+Seoul" target="_blank" class="maps-link">📍 논현삼계탕</a>
       <a href="https://map.naver.com/p/search/논현삼계탕+본점" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+    </div>
+  </div>
+</div>
+
+<div class="event-card meal" data-dt="2026-08-08T13:00" data-lat="37.5200" data-lng="127.0300">
+  <div class="event-time">13:00</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag meal">🍲 Lunch Option 2</span></div>
+    <div class="event-name">KimbuksoonKeunNambijip — Kimchi Jjigae</div>
+    <div class="event-notes">Alternative lunch option — kimchi jjigae (kimchi stew) done right. A bubbling hot pot of aged kimchi, tofu, pork, and broth. One of Korea's most comforting dishes and a great farewell Korean meal.</div>
+    <div class="event-links">
+      <a href="https://share.google/bsbvExAPWRr1jouiu" target="_blank" class="maps-link">📍 Google Maps</a>
+      <a href="https://map.naver.com/p/search/김복순큰남비집" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
@@ -162,15 +214,15 @@ title: "Aug 8 — Final Seoul Day"
 ```{=html}
 <div class="section-header">Dinner</div>
 
-<div class="event-card meal" data-dt="2026-08-08T19:00" data-lat="37.5636" data-lng="126.9834">
+<div class="event-card meal" data-dt="2026-08-08T19:00" data-lat="37.5600" data-lng="126.9850">
   <div class="event-time">19:00</div>
   <div class="event-body">
-    <div class="event-tags"><span class="tag meal">🍽️ Final Korea Dinner</span></div>
-    <div class="event-name">설매네 — Final Korea Meal</div>
-    <div class="event-notes">Your last proper Korean dinner! Make it count.</div>
+    <div class="event-tags"><span class="tag meal">🍱 Final Korea Dinner</span><span class="tag note">⚠️ Reservation Needed</span></div>
+    <div class="event-name">SeoulMong — Izakaya / Sashimi</div>
+    <div class="event-notes">Korean izakaya-style sashimi restaurant — a perfect final dinner in Korea. <strong>⚠️ Reservation to be booked — add to the to-do list.</strong></div>
     <div class="event-links">
-      <a href="https://www.google.com/maps/search/?api=1&query=설매네+Seoul+restaurant" target="_blank" class="maps-link">📍 설매네</a>
-      <a href="https://map.naver.com/p/search/설매네" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+      <a href="https://share.google/SnMuyIDAcAsxLyQCl" target="_blank" class="maps-link">📍 Google Maps</a>
+      <a href="https://map.naver.com/p/search/서울몽" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
@@ -200,5 +252,5 @@ title: "Aug 8 — Final Seoul Day"
 ```
 
 ```{=html}
-<div class="note-box"><strong>Last night in Korea!</strong> Flight tomorrow at 17:45. Pack tonight — check-out and head to airport by early afternoon. Don't forget: Birch Coffee brunch in the morning!</div>
+<div class="note-box"><strong>Last night in Korea!</strong> Flight tomorrow. Pack tonight — check-out and head to airport by early afternoon. <strong>Book SeoulMong reservation before it's too late!</strong> Also confirm EcoJardin head spa booking in advance.</div>
 ```
