@@ -7,7 +7,6 @@ title: "Jul 31 — Seoul → Jeju"
   <div class="day-badge">Friday · July 31, 2026 · Day 6 of 15</div>
   <h1 class="day-title">Seoul → Jeju ✈️🌊</h1>
   <div class="day-subtitle">📍 Seoul → Jeju Airport · Dongmun Market · <strong>Hotel:</strong> Shilla Stay Jeju Airport</div>
-  <div class="pending-badge">🔧 Needs Fixes</div>
 </div>
 ```
 
@@ -30,7 +29,7 @@ title: "Jul 31 — Seoul → Jeju"
     { name:'Jeju One Car Rental 🚗 (Booked)', lat:33.5100, lng:126.4940, c:'#C62828', url:'https://www.google.com/maps/search/?api=1&query=Jeju+One+Car+rental' },
     { name:'Shilla Stay Jeju Airport 🏨', lat:33.48580289503151, lng:126.49091012883574, hotel:true, url:'https://www.google.com/maps/search/?api=1&query=Shilla+Stay+Jeju+Airport' },
     { name:'Dongmun Market 🛒', lat:33.51163406327469, lng:126.5262724931184, c:'#43A047', url:'https://www.google.com/maps/search/?api=1&query=Dongmun+Market+Jeju' },
-    { name:'Badang-Gil Abalone Soup 🐚', lat:33.40986694917806, lng:126.25876309140342, c:'#C62828', url:'https://share.google/LXFNUJ6QB8Rc93dcA' },
+    { name:'Jung Jong Jeju Black Pork BBQ 🐷', lat:33.49112408965034, lng:126.50181770217206, c:'#C62828', url:'https://maps.app.goo.gl/Wo5RRJGezrjXzfdP9' },
   ];
   window.pageMap = map; window.pageMarkers = [];
   pts.forEach(function(p) {
@@ -133,20 +132,20 @@ title: "Jul 31 — Seoul → Jeju"
   </div>
 </div>
 
-<div class="event-card meal" data-dt="2026-07-31T19:30" data-lat="33.40986694917806" data-lng="126.25876309140342">
+<div class="event-card meal" data-dt="2026-07-31T19:30" data-lat="33.49112408965034" data-lng="126.50181770217206">
   <div class="event-time">19:30</div>
   <div class="event-body">
-    <div class="event-tags"><span class="tag meal">🐚 Save for Later</span><span class="tag note" style="background:#FFF3E0;color:#E65100;border-color:#FFB74D">⚠️ Closed by Arrival</span></div>
-    <div class="event-name">Badang-Gil — Abalone Soup (전복죽)</div>
-    <div class="event-notes">Jeju is famous for its abalone. Jeonbok-juk (abalone porridge) or abalone soup is a must-try on the island. Rich, oceanic, luxurious.<br>🚗 <strong>~35 min drive</strong> from Shilla Stay Jeju Airport.<br>⚠️ <strong>Hours: 8:00 AM – 3:00 PM</strong> — we won't make it on arrival day. Save this for another morning during the Jeju stay.</div>
+    <div class="event-tags"><span class="tag meal">🐷 Dinner</span></div>
+    <div class="event-name">Jung Jong Jeju Black Pork BBQ (흑돼지)</div>
+    <div class="event-notes">Jeju's signature dish — black Berkshire pigs raised on the island, with distinctly richer flavour. Best enjoyed as thick slices of pork belly (samgyeopsal) grilled over charcoal. Right by the hotel — perfect first-night dinner.</div>
     <div class="event-links">
-      <a href="https://share.google/LXFNUJ6QB8Rc93dcA" target="_blank" class="maps-link">📍 Google Maps</a>
-      <a href="https://map.naver.com/p/search/바당길+전복+제주" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+      <a href="https://maps.app.goo.gl/Wo5RRJGezrjXzfdP9" target="_blank" class="maps-link">📍 Google Maps</a>
+      <a href="https://map.naver.com/p/search/중정제주흑돼지" target="_blank" class="maps-link naver-link">🗺 Naver</a>
     </div>
   </div>
 </div>
 ```
 
 ```{=html}
-<div class="note-box"><strong>Jeju tip:</strong> The car rental is essential — most scenic spots are 30–60 min drive from the city. Fill up the tank when you can, fewer stations outside the city. <strong>Set early alarms</strong> — Seongsan sunrise is tomorrow!</div>
+<div class="note-box"><strong>Jeju tip:</strong> The car rental is essential — most scenic spots are 30–60 min drive from the city. Fill up the tank when you can, fewer stations outside the city.</div>
 ```
