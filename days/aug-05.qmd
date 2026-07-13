@@ -71,12 +71,12 @@ title: "Aug 5 — Haeundae Day"
 ```{=html}
 <div class="section-header">Morning — Sky Capsule</div>
 
-<div class="event-card morning" data-dt="2026-08-05T09:00" data-lat="35.1637" data-lng="129.1856">
-  <div class="event-time">09:00</div>
+<div class="event-card morning" data-dt="2026-08-05T08:30" data-lat="35.1637" data-lng="129.1856">
+  <div class="event-time">08:30–09:00</div>
   <div class="event-body">
-    <div class="event-tags"><span class="tag note">📅 Book 1 month ahead</span><span class="tag activity">🚡 Ride</span></div>
-    <div class="event-name">Sky Capsule — Haeundae Blueline Park</div>
-    <div class="event-notes">Pastel-coloured glass pod trains that ride along a coastal rail above the sea cliffs. One of Busan's most iconic and photogenic experiences. Capacity is very limited — <strong>book well in advance</strong> at the Haeundae Blueline Park website.
+    <div class="event-tags"><span class="tag booked">BOOKED ✓</span><span class="tag activity">🚡 Ride</span></div>
+    <div class="event-name">Sky Capsule (Cheongsapo Departure) — Haeundae Blueline Park</div>
+    <div class="event-notes">Pastel-coloured glass pod trains that ride along a coastal rail above the sea cliffs. One of Busan's most iconic and photogenic experiences. Reservation confirmed — entry window is <strong>8:30–9:00 AM</strong>.
       <ul>
         <li>~2.7km coastal route from Mipo to Cheongsapo</li>
         <li>Pods seat 2 people, ~30 min round trip</li>
@@ -86,6 +86,7 @@ title: "Aug 5 — Haeundae Day"
     <div class="event-links">
       <a href="https://www.google.com/maps/search/?api=1&query=Haeundae+Blueline+Park+Sky+Capsule+Busan" target="_blank" class="maps-link">📍 Sky Capsule</a>
       <a href="https://map.naver.com/p/search/해운대블루라인파크+스카이캡슐" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+      <a href="https://www.tbluelinepark.com/mypage/login_eng/GD2100048" target="_blank" class="maps-link">🎫 Retrieve Ticket</a>
     </div>
   </div>
 </div>
@@ -175,5 +176,5 @@ title: "Aug 5 — Haeundae Day"
 ```
 
 ```{=html}
-<div class="note-box"><strong>Sky Capsule booking:</strong> Book online at the Haeundae Blueline Park website — usually opens reservations ~1 month in advance. Very limited capacity. Time slots sell out fast.</div>
+<div class="note-box"><strong>Sky Capsule booking:</strong> Reservation confirmed for 8:30–9:00 AM entry (Cheongsapo Departure). Log in to retrieve the ticket at <a href="https://www.tbluelinepark.com/mypage/login_eng/GD2100048" target="_blank">tbluelinepark.com/mypage/login_eng/GD2100048</a>.</div>
 ```
