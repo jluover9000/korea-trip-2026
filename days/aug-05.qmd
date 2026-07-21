@@ -6,7 +6,7 @@ title: "Aug 5 — Haeundae Day"
 <div class="day-hero">
   <div class="day-badge">Wednesday · August 5, 2026 · Day 11 of 15</div>
   <h1 class="day-title">Haeundae Day 🏖️</h1>
-  <div class="day-subtitle">📍 Sky Capsule · Jangteo Gukbap · Haedong Temple · Standard Bread · Sunset · 첨벙 · Busan</div>
+  <div class="day-subtitle">📍 Sky Capsule · Skyline Luge · Jangteo Gukbap · Haedong Temple · Standard Bread · Sunset · 첨벙 · Busan</div>
   <div class="pending-badge">🔧 Needs Fixes</div>
 </div>
 ```
@@ -28,11 +28,13 @@ title: "Aug 5 — Haeundae Day"
   var pts = [
     { name:'🏨 L7 Haeundae by Lotte Hotels', lat:35.1602318553241, lng:129.1600771067464, hotel:true, url:'https://www.google.com/maps/search/?api=1&query=L7+Haeundae+by+Lotte+Hotels+Busan' },
     { name:'Sky Capsule & Blueline Park 🚡', lat:35.1637, lng:129.1856, c:'#1565C0', url:'https://www.google.com/maps/search/?api=1&query=Haeundae+Blueline+Park+Sky+Capsule+Busan' },
+    { name:'Skyline Luge Busan 🛝', lat:35.19456849680327, lng:129.2186930003682, c:'#8E24AA', url:'https://www.google.com/maps/search/?api=1&query=35.19456849680327,129.2186930003682' },
     { name:'Jangteo Gukbap 🍲', lat:35.1580, lng:129.1620, c:'#43A047', url:'https://share.google/yZXgYF1o7yxzcPRW7' },
     { name:'Haedong Yonggungsa Temple 🏯', lat:35.1878, lng:129.2230, c:'#C62828', url:'https://www.google.com/maps/search/?api=1&query=Haedong+Yonggungsa+Temple+Busan' },
     { name:'Standard Bread Haeundae 🍞', lat:35.1590, lng:129.1610, c:'#FFA726', url:'https://share.google/gim9vKPZZlnmpHmJb' },
     { name:'Haeundae Beach (sunset) 🌅', lat:35.1587, lng:129.1604, c:'#5C6BC0', url:'https://www.google.com/maps/search/?api=1&query=Haeundae+Beach+Busan' },
     { name:'첨벙 Cheombeong 🐟 (Sashimi)', lat:35.1592, lng:129.1635, c:'#2E7D32', url:'https://share.google/YoWNAZXPOVPTer4XO' },
+    { name:'Haeundae River Cruise (Yacht Tour) ⛵', lat:35.1699, lng:129.1289, c:'#00838F', url:'https://www.google.com/maps/search/?api=1&query=Haeundae+River+Cruise+Ticket+Office+Busan' },
   ];
   window.pageMap = map; window.pageMarkers = [];
   pts.forEach(function(p) {
@@ -87,6 +89,18 @@ title: "Aug 5 — Haeundae Day"
       <a href="https://www.google.com/maps/search/?api=1&query=Haeundae+Blueline+Park+Sky+Capsule+Busan" target="_blank" class="maps-link">📍 Sky Capsule</a>
       <a href="https://map.naver.com/p/search/해운대블루라인파크+스카이캡슐" target="_blank" class="maps-link naver-link">🗺 Naver</a>
       <a href="https://www.tbluelinepark.com/mypage/login_eng/GD2100048" target="_blank" class="maps-link">🎫 Retrieve Ticket</a>
+    </div>
+  </div>
+</div>
+
+<div class="event-card morning" data-dt="2026-08-05T09:30" data-lat="35.19456849680327" data-lng="129.2186930003682">
+  <div class="event-time">09:30</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag activity">🛝 Luge</span></div>
+    <div class="event-name">Skyline Luge Busan</div>
+    <div class="event-notes">Gravity-powered luge karts on a track overlooking the coast — a fun, quick adrenaline stop near Haeundae.</div>
+    <div class="event-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=35.19456849680327,129.2186930003682" target="_blank" class="maps-link">📍 Google Maps</a>
     </div>
   </div>
 </div>
@@ -148,6 +162,19 @@ title: "Aug 5 — Haeundae Day"
 ```{=html}
 <div class="section-header">Evening</div>
 
+<div class="event-card meal" data-dt="2026-08-05T17:30" data-lat="35.1592" data-lng="129.1635">
+  <div class="event-time">17:30</div>
+  <div class="event-body">
+    <div class="event-tags"><span class="tag meal">🐟 Dinner</span></div>
+    <div class="event-name">첨벙 Cheombeong — Sashimi</div>
+    <div class="event-notes">Fresh sashimi dinner in Busan. One of the best spots near Haeundae for high-quality raw fish (회). Moved earlier to leave time to reach Centum City for the yacht tour.</div>
+    <div class="event-links">
+      <a href="https://share.google/YoWNAZXPOVPTer4XO" target="_blank" class="maps-link">📍 Google Maps</a>
+      <a href="https://map.naver.com/p/search/첨벙+부산" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+    </div>
+  </div>
+</div>
+
 <div class="event-card evening" data-dt="2026-08-05T18:30" data-lat="35.1587" data-lng="129.1604">
   <div class="event-time">18:30</div>
   <div class="event-body">
@@ -161,15 +188,22 @@ title: "Aug 5 — Haeundae Day"
   </div>
 </div>
 
-<div class="event-card meal" data-dt="2026-08-05T19:30" data-lat="35.1592" data-lng="129.1635">
-  <div class="event-time">19:30</div>
+<div class="event-card evening" data-dt="2026-08-05T20:00" data-lat="35.1699" data-lng="129.1289">
+  <div class="event-time">20:00–20:50</div>
   <div class="event-body">
-    <div class="event-tags"><span class="tag meal">🐟 Dinner</span></div>
-    <div class="event-name">첨벙 Cheombeong — Sashimi</div>
-    <div class="event-notes">Fresh sashimi dinner in Busan. One of the best spots near Haeundae for high-quality raw fish (회).</div>
+    <div class="event-tags"><span class="tag booked">BOOKED ✓</span><span class="tag activity">⛵ Yacht Tour</span></div>
+    <div class="event-name">Haeundae River Cruise — Yacht Tour</div>
+    <div class="event-notes">Reservation for 2 adults. Boards from the ticket office at the APEC Naru Park entrance along the Suyeong River; descend the stairs on the right riverside of the office to reach the dock. ~15-20 min taxi from Haeundae Beach — leave by 19:30 to be safe.
+      <ul>
+        <li>Address: 85, Suyeonggangbyeon-daero, Haeundae-gu, Busan</li>
+        <li>Subway: Line 2, Centum City Station (Exit 12), ~3 min walk</li>
+        <li>Phone: 051-711-1789</li>
+        <li>Note: if hungry before boarding, there are cafes/convenience stores near Centum City / Shinsegae department store by the ticket office — good option for a quick bite or snack</li>
+      </ul>
+    </div>
     <div class="event-links">
-      <a href="https://share.google/YoWNAZXPOVPTer4XO" target="_blank" class="maps-link">📍 Google Maps</a>
-      <a href="https://map.naver.com/p/search/첨벙+부산" target="_blank" class="maps-link naver-link">🗺 Naver</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Haeundae+River+Cruise+Ticket+Office+Busan" target="_blank" class="maps-link">📍 Google Maps</a>
+      <a href="https://en.haeundaerivercruise.com/ADDRESSINFO" target="_blank" class="maps-link">🎫 Ticket Office Info</a>
     </div>
   </div>
 </div>
